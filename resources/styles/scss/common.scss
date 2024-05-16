@@ -21,6 +21,7 @@ time, mark, audio, video {
     box-sizing: border-box;
     text-decoration: none;
 	word-break: keep-all;
+    letter-spacing: -0.025em;
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
@@ -54,21 +55,29 @@ button {
 
 $font: 'Noto Sans KR';
 
-// ========================
-// 전경색
-// fg == foreground
-// ========================
+/* ===========================================================
+   Section: SCSS 변수 - 전경색
+   Description: 전경색 정의를 위한 SCSS 변수 설정
+   Author: yhEun
+   Date: 2024.05.16
+   =========================================================== */
 $fg-black: #111111;
 $fg-white: #ffffff;
 
-// ========================
-// 배경색
-// bg == background
-// ========================
+/* ===========================================================
+   Section: SCSS 변수 - 배경색 [background]
+   Description: 배경색 정의를 위한 SCSS 변수 설정
+   Author: yhEun
+   Date: 2024.05.16
+   =========================================================== */
 $bg-black: #111111;
 $bg-white: #ffffff;
 
-$brand: #33BA8A;
+$brand: #7D67FF;
+
+$label-primary: #111111;
+$label-secondary: #5F5F5F;
+$label-teriary: #898989;
 
 // NOTE: 데이트피커 커스텀
 .ui-datepicker{
@@ -138,6 +147,36 @@ $brand: #33BA8A;
                     }
                 }
             }
+        }
+    }
+}
+
+
+
+
+/* ===========================================================
+   Section: 인풋 컴포넌트
+   Description: 인풋 컴포넌트 [input;select;checkbox;radio;textarea]
+   Author: yhEun
+   Date: 2024.05.16
+   =========================================================== */
+$label-title: 500 12px/normal $font;
+$label-body: 500 14px/normal $font;
+
+.ipt{
+    span{
+        font: $label-title;
+        color: $fg-black;
+    }
+    input{
+        border: unset;
+        outline: unset;
+        font: $label-body;
+        padding: 14px 16px 14px 0;
+        background-color: $bg-white;
+        border: 1px solid $label-secondary;
+        &::placeholder{
+            color: $label-secondary;
         }
     }
 }
