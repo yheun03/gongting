@@ -52,48 +52,21 @@ button {
 }
 
 
-$font: 'Pretendard';
-$font-01white: #ffffff;
-$font-02black: #111111;
-$font-03grey: #505050;
-$font-04grey: #767676;
-$font-disabled: #999999;
+$font: 'Noto Sans KR';
 
-$mb-d3-sb: 600 40px/52px $font;
-$mb-d4-sb: 600 36px/44px $font;
-$mb-h4-sb: 600 20px/28px $font;
-$mb-h4-rg: 400 20px/28px $font;
-$mb-h5-sb: 600 18px/26px $font;
-$mb-t1-sb: 600 24px/34px $font;
-$mb-t4-sb: 600 16px/24px $font;
-$mb-t4-rg: 400 16px/24px $font;
-$mb-t5-sb: 600 18px/26px $font;
-$mb-b1-sb: 600 15px/22px $font;
-$mb-b2-sb: 600 14px/20px $font;
-$mb-b2-rg: 400 14px/20px $font;
-$mb-b2-lt: 200 14px/20px $font;
-$mb-b3-rg: 400 13px/18px $font;
-$mb-b4-rg: 400 12px/18px $font;
-$mb-c1-sb: 600 13px/18px $font;
-$mb-c1-rg: 400 13px/18px $font;
-$mb-c2-sb: 600 12px/18px $font;
-$mb-c2-rg: 400 12px/18px $font;
-$mb-c3-rg: 400 11px/16px $font;
+// ========================
+// 전경색
+// fg == foreground
+// ========================
+$fg-black: #111111;
+$fg-white: #ffffff;
 
-$btn1-rg: 400 16px/24px $font;
-$btn2-sb: 600 14px/20px $font;
-$btn2-rg: 400 14px/20px $font;
-$btn4-rg: 400 12px/18px $font;
-
-$line-black: #111111;
-$line-light: #F1F1F5;
-$line-regular: #E5E5EC;
-
+// ========================
+// 배경색
+// bg == background
+// ========================
 $bg-black: #111111;
 $bg-white: #ffffff;
-$bg-regular: #F1F1F5;
-$bg-red: #DC0000;
-$bg-dim: rgba($bg-black, 0.4);
 
 $brand: #33BA8A;
 
@@ -116,9 +89,9 @@ $brand: #33BA8A;
                 order: -1;
                 margin-right: auto;
                 select{
-                    font: $mb-b2-rg;
+                    font: 400 14px/20px $font;
                     letter-spacing: -0.025em;
-                    color: $font-02black;
+                    color: $fg-black;
                     padding: 10px 8px;
                     border: unset;
                 }
@@ -129,12 +102,11 @@ $brand: #33BA8A;
         width: 100%;
         tr > *{
             position: relative;
-            font: $mb-t4-rg;
+            font: 400 16px/24px $font;
             letter-spacing: -0.025em;
-            color: $font-02black;
+            color: $fg-black;
             padding-block: 12px;
             text-align: center;
-            color: $font-02black;
             a{
                 color: inherit;
             }
@@ -160,7 +132,7 @@ $brand: #33BA8A;
                     color: $brand;
                 }
                 &-current-day{
-                    color: $font-01white !important;
+                    color: $fg-white !important;
                     &::before{
                         background-color: $brand;
                     }
