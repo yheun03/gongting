@@ -1,0 +1,266 @@
+/*
+Copyright (c) 2021 Kil Hyung-jin, with Reserved Font Name Pretendard.
+https://github.com/orioncactus/pretendard
+
+This Font Software is licensed under the SIL Open Font License, Version 1.1.
+This license is copied below, and is also available with a FAQ at:
+http://scripts.sil.org/OFL
+*/
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 900;
+  font-display: swap;
+  src: local("Pretendard Black"), url("/resources/fonts/Pretendard-Black.woff2") format("woff2"), url("/resources/fonts/Pretendard-Black.woff") format("woff");
+}
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 800;
+  font-display: swap;
+  src: local("Pretendard ExtraBold"), url("/resources/fonts/Pretendard-ExtraBold.woff2") format("woff2"), url("/resources/fonts/Pretendard-ExtraBold.woff") format("woff");
+}
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 700;
+  font-display: swap;
+  src: local("Pretendard Bold"), url("/resources/fonts/Pretendard-Bold.woff2") format("woff2"), url("/resources/fonts/Pretendard-Bold.woff") format("woff");
+}
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 600;
+  font-display: swap;
+  src: local("Pretendard SemiBold"), url("/resources/fonts/Pretendard-SemiBold.woff2") format("woff2"), url("/resources/fonts/Pretendard-SemiBold.woff") format("woff");
+}
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 500;
+  font-display: swap;
+  src: local("Pretendard Medium"), url("/resources/fonts/Pretendard-Medium.woff2") format("woff2"), url("/resources/fonts/Pretendard-Medium.woff") format("woff");
+}
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 400;
+  font-display: swap;
+  src: local("Pretendard Regular"), url("/resources/fonts/Pretendard-Regular.woff2") format("woff2"), url("/resources/fonts/Pretendard-Regular.woff") format("woff");
+}
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 300;
+  font-display: swap;
+  src: local("Pretendard Light"), url("/resources/fonts/Pretendard-Light.woff2") format("woff2"), url("/resources/fonts/Pretendard-Light.woff") format("woff");
+}
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 200;
+  font-display: swap;
+  src: local("Pretendard ExtraLight"), url("/resources/fonts/Pretendard-ExtraLight.woff2") format("woff2"), url("/resources/fonts/Pretendard-ExtraLight.woff") format("woff");
+}
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 100;
+  font-display: swap;
+  src: local("Pretendard Thin"), url("/resources/fonts/Pretendard-Thin.woff2") format("woff2"), url("/resources/fonts/Pretendard-Thin.woff") format("woff");
+}
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  vertical-align: baseline;
+  box-sizing: border-box;
+  text-decoration: none;
+  word-break: keep-all;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+img {
+  display: block;
+}
+
+a,
+button {
+  cursor: pointer;
+  outline: unset;
+}
+
+.ui-datepicker-header {
+  display: flex;
+  align-items: center;
+}
+.ui-datepicker-header .ui-corner-all {
+  text-indent: -9999px;
+  width: 48px;
+  aspect-ratio: 1;
+  background: url(/resources/images/icons/datepicker/ic-prev.svg) center/24px no-repeat;
+}
+.ui-datepicker-header .ui-corner-all.ui-datepicker-next {
+  background-image: url(/resources/images/icons/datepicker/ic-next.svg);
+}
+.ui-datepicker-header .ui-datepicker-title {
+  order: -1;
+  margin-right: auto;
+}
+.ui-datepicker-header .ui-datepicker-title select {
+  font: 400 14px/20px "Pretendard";
+  letter-spacing: -0.025em;
+  color: #111111;
+  padding: 10px 8px;
+  border: unset;
+}
+.ui-datepicker-calendar {
+  width: 100%;
+}
+.ui-datepicker-calendar tr > * {
+  position: relative;
+  font: 400 16px/24px "Pretendard";
+  letter-spacing: -0.025em;
+  color: #111111;
+  padding-block: 12px;
+  text-align: center;
+  color: #111111;
+}
+.ui-datepicker-calendar tr > * a {
+  color: inherit;
+}
+.ui-datepicker-calendar td.ui-datepicker-today::before, .ui-datepicker-calendar td.ui-datepicker-current-day::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 32px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  border: 1px solid #33BA8A;
+  z-index: -1;
+}
+.ui-datepicker-calendar td.ui-datepicker-today {
+  color: #33BA8A;
+}
+.ui-datepicker-calendar td.ui-datepicker-current-day {
+  color: #ffffff !important;
+}
+.ui-datepicker-calendar td.ui-datepicker-current-day::before {
+  background-color: #33BA8A;
+}
+
+.wrap {
+  max-width: 375px;
+  width: 100%;
+  margin: auto;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  display: flex;
+  align-items: center;
+  padding-inline: 20px;
+  height: 56px;
+  background-color: #ffffff;
+  box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.0588235294);
+  z-index: 10;
+}
+header h1 img {
+  height: 38px;
+}
+header ul {
+  margin-left: auto;
+  display: flex;
+}
+header ul li {
+  display: inline-block;
+  margin-left: 16px;
+}
+header ul img {
+  height: 28px;
+}
+header ul:only-child {
+  width: 100%;
+}
+header ul:only-child li:first-child {
+  margin: unset;
+}
+header ul:only-child li:first-child + li {
+  margin-left: auto;
+}
+header:has(ul:only-child) {
+  padding-left: 10px;
+}
+
+section {
+  min-height: calc(100vh - 108px);
+  padding-block: 16px 10px;
+  overflow-x: hidden;
+}
+
+footer {
+  position: sticky;
+  min-height: 52px;
+  bottom: 0;
+  background-color: #ffffff;
+  box-shadow: 0 -10px 5px 0 rgba(0, 0, 0, 0.0588235294);
+  z-index: 10;
+}
+footer ul {
+  display: flex;
+}
+footer ul li {
+  flex: 1;
+}
+footer ul li a {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding-block: 4px;
+}
+footer ul li img {
+  height: 28px;
+}
+footer ul li span {
+  font: 400 11px/16px "Pretendard";
+  letter-spacing: -0.025em;
+  color: #767676;
+}
+footer ul.btn-wrap {
+  padding: 12px 20px;
+}
+footer ul.btn-wrap .btn {
+  border-radius: unset;
+  text-align: center;
+  font: 400 14px/20px "Pretendard";
+}/*# sourceMappingURL=layout.css.map */
