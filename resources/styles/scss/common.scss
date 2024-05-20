@@ -84,6 +84,8 @@ $line: #E3E3E3;
 $label-title: 500 12px/normal $font;
 $label-body: 500 14px/normal $font;
 
+$btn: 500 16px/normal $font;
+
 // NOTE: 데이트피커 커스텀
 .ui-datepicker{
     &-header{
@@ -207,6 +209,7 @@ $label-body: 500 14px/normal $font;
             color: $label-secondary;
         }
         &:before{
+            display: block;
             content: "";
             font-size: 14px;
             width: 1em;
@@ -232,5 +235,15 @@ $label-body: 500 14px/normal $font;
 }
 
 .btn{
-    
+    display: block;
+    font: $btn;
+    color: $brand;
+    background-color: rgba($brand, 0.2);
+    padding: 13.5px 16px;
+    text-align: center;
+    border-radius: 24px;
+    &.primary{
+        background-color: $brand;
+        color: $fg-white;
+    }
 }
