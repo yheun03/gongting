@@ -79,6 +79,11 @@ $label-primary: #111111;
 $label-secondary: #5F5F5F;
 $label-teriary: #898989;
 
+$line: #E3E3E3;
+
+$label-title: 500 12px/normal $font;
+$label-body: 500 14px/normal $font;
+
 // NOTE: 데이트피커 커스텀
 .ui-datepicker{
     &-header{
@@ -160,23 +165,62 @@ $label-teriary: #898989;
    Author: yhEun
    Date: 2024.05.16
    =========================================================== */
-$label-title: 500 12px/normal $font;
-$label-body: 500 14px/normal $font;
 
 .ipt{
     span{
+        display: block;
         font: $label-title;
-        color: $fg-black;
+        color: $label-primary;
+        & + div{
+            margin-top: 6px;
+        }
     }
     input{
+        flex: 1;
         border: unset;
         outline: unset;
         font: $label-body;
         padding: 14px 16px 14px 0;
         background-color: $bg-white;
-        border: 1px solid $label-secondary;
+        border: 1px solid $line;
+        border-radius: 10px;
+        text-indent: 16px;
         &::placeholder{
             color: $label-secondary;
+        }
+    }
+    & > div,
+    label{
+        display: flex;
+        align-items: center;
+        gap: 6px;
+    }
+    label{
+        [type=checkbox],
+        [type=radio]{
+            display: none;
+        }
+        span{
+            color: $label-secondary;
+        }
+        &:before{
+            content: "";
+            font-size: 14px;
+            width: 1em;
+            aspect-ratio: 1;
+            border: 1px solid $brand;
+            border-radius: 2px;
+            margin: 5px 4px 5px 5px;
+            box-sizing: border-boxs;
+            background: url(/resources/icons/ic-check.svg) 0 center / 2em no-repeat;
+        }
+        &:has(:checked){
+            &:before{
+                background: {
+                    color: $brand;
+                    position-x: -1em;
+                }
+            }
         }
     }
 }
