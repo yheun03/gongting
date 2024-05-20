@@ -81,11 +81,17 @@ $label-teriary: #898989;
 
 $line: #E3E3E3;
 
-$label-title: 500 12px/18px $font;
-$label-body: 500 14px/20px $font;
+$medium: 400;
+$bold: 600;
 
-$mb-t1-sb: 700 16px/24px $font;
-$mb-t1-rg: 500 16px/24px $font;
+$label-title: $medium 14px/18px $font;
+$label-body: $medium 12px/20px $font;
+
+$mb-t1-sb: $bold 16px/24px $font;
+$mb-t1-rg: $medium 16px/24px $font;
+
+$mb-h2-sb: $bold 24px/34px $font;
+$mb-h3-sb: $bold 20px/28px $font;
 
 $btn: 500 16px/24px $font;
 
@@ -250,6 +256,33 @@ $btn: 500 16px/24px $font;
     .full{
         flex: 100%;
     }
+    &:has(input.box) > div{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        label{
+            flex: 50%;
+            border: 1px solid $line;
+            border-radius: 10px;
+            justify-content: center;
+            flex-direction: column;
+            height: 100px;
+            color: $label-teriary;
+            span{
+                font: $mb-h3-sb;
+                color: inherit;
+            }
+            p{
+                font: $label-body;
+            }
+            &:before{
+                content: unset;
+            }
+            &:has(:checked){
+                color: $brand;
+                border-color: $brand;
+            }
+        }
+    }
 }
 
 .btn{
@@ -263,5 +296,25 @@ $btn: 500 16px/24px $font;
     &.primary{
         background-color: $brand;
         color: $fg-white;
+    }
+}
+
+.list{
+    display: flex;
+    &.hobby{
+        flex-wrap: wrap;
+        gap: 10px 6px;
+        justify-content: center;
+        input{
+            display: none;
+        }
+        span{
+            display: block;
+            font: $label-body;
+            color: $label-secondary;
+            padding: 6px 14px;
+            border: 1px solid $line;
+            border-radius: 14px;
+        }
     }
 }
