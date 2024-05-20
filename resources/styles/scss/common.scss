@@ -189,6 +189,9 @@ $label-body: 500 14px/normal $font;
             color: $label-secondary;
         }
     }
+    & > div{
+        flex-wrap: wrap;
+    }
     & > div,
     label{
         display: flex;
@@ -223,4 +226,11 @@ $label-body: 500 14px/normal $font;
             }
         }
     }
+    .full{
+        flex: 100%;
+    }
+}
+
+.btn{
+    
 }
