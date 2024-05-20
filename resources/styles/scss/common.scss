@@ -81,10 +81,13 @@ $label-teriary: #898989;
 
 $line: #E3E3E3;
 
-$label-title: 500 12px/normal $font;
-$label-body: 500 14px/normal $font;
+$label-title: 500 12px/18px $font;
+$label-body: 500 14px/20px $font;
 
-$btn: 500 16px/normal $font;
+$mb-t1-sb: 700 16px/24px $font;
+$mb-t1-rg: 500 16px/24px $font;
+
+$btn: 500 16px/24px $font;
 
 // NOTE: 데이트피커 커스텀
 .ui-datepicker{

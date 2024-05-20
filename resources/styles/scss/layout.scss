@@ -14,22 +14,39 @@ $height-footer: 54px;
 header{
     position: sticky;
     top: 0;
-    display: flex;
-    align-items: center;
-    padding-inline: 20px;
-    height: $height-header;
+    padding-inline: 10px;
     background-color: $bg-white;
     z-index: 10;
+    color: $fg-black;
+    &,
+    ul{
+        display: flex;
+        align-items: center;
+        & ~ ul{
+            margin-left: auto;
+        }
+    }
+    img{
+        width: 44px;
+        aspect-ratio: 1;
+        object-fit: cover;
+    }
+    h1{
+        font: $mb-t1-sb;
+        flex: 1;
+        text-align: center;
+    }
+    span,
+    a,
+    p{
+        font: $mb-t1-rg;
+        color: $fg-black;
+        display: block;
+        min-width: 44px;
+    }
 }
 section{
     min-height: calc(100vh - ($height-header + $height-footer));
     padding-block: 16px 10px;
     overflow-x: hidden;
-}
-footer{
-    position: sticky;
-    min-height: $height-footer;
-    bottom: 0;
-    background-color: $bg-white;
-    z-index: 10;
 }

@@ -1,2 +1,37 @@
 @charset 'utf-8';
 @import 'layout.scss';
+
+
+footer{
+    position: sticky;
+    min-height: $height-footer;
+    bottom: 0;
+    background-color: $bg-white;
+    z-index: 10;
+    ul{
+        display: flex;
+        padding: 12px 20px;
+        li{
+            flex: 1;
+            &:first-child{
+                .btn{
+                    border: {
+                        top-left-radius: 24px;
+                        bottom-left-radius: 24px;
+                    }
+                }
+            }
+            &:last-child{
+                .btn{
+                    border: {
+                        top-right-radius: 24px;
+                        bottom-right-radius: 24px;
+                    }
+                }
+            }
+        }
+    }   
+    .btn{
+        border-radius: unset;
+    }
+}
