@@ -180,7 +180,9 @@ $btn: 500 16px/24px $font;
             margin-top: 6px;
         }
     }
-    input{
+    input,
+    select,
+    textarea{
         flex: 1;
         border: unset;
         outline: unset;
@@ -190,9 +192,22 @@ $btn: 500 16px/24px $font;
         border: 1px solid $line;
         border-radius: 10px;
         text-indent: 16px;
+        appearance: unset;
+        resize: none;
         &::placeholder{
             color: $label-secondary;
         }
+    }
+    select{
+        padding-right: 44px;
+        background: url(/resources/icons/ic-arrow-bottom.svg) right 10px center/24px no-repeat;
+        option{
+            font: $mb-t1-rg;
+        }
+    }
+    textarea{
+        text-indent: unset;
+        padding-left: 16px;
     }
     & > div{
         flex-wrap: wrap;
