@@ -201,10 +201,10 @@
         </section>
         <footer>
             <ul>
-                <li class="prev">
+                <li class="match-prev">
                     <a href="#" class="btn">이전</a>
                 </li>
-                <li class="next">
+                <li class="match-next">
                     <a href="#" class="btn primary">다음</a>
                 </li>
             </ul>
@@ -213,12 +213,13 @@
     <script>
         $(document).ready(function(){
             var $match = $('.match');
-            var $prevButton = $('.prev');
-            var $nextButton = $('.next');
+            var $dotsButton = $('.match-dots')
+            var $prevButton = $('.match-prev');
+            var $nextButton = $('.match-next');
             
             $match.slick({
                 dots: true,
-                appendDots: $('.match-dots'),
+                appendDots: $dotsButton,
                 prevArrow: $prevButton,
                 nextArrow: $nextButton,
                 infinite: false,
