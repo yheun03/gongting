@@ -1286,6 +1286,12 @@ button {
 .ipt select option {
   font: 400 16px/24px "Noto Sans KR";
 }
+.ipt select:not(:only-child) {
+  width: fit-content;
+  flex: 0;
+  text-indent: unset;
+  padding-left: 16px;
+}
 .ipt textarea {
   text-indent: unset;
   padding-left: 16px;

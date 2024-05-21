@@ -210,6 +210,12 @@ $btn: 500 16px/24px $font;
         option{
             font: $mb-t1-rg;
         }
+        &:not(:only-child){
+            width: fit-content;
+            flex: 0;
+            text-indent: unset;
+            padding-left: 16px;
+        }
     }
     textarea{
         text-indent: unset;
