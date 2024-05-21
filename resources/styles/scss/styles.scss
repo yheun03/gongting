@@ -11,66 +11,36 @@
         color: $label-teriary;
     }
 }
-.setting{
-    &-dots{
-        position: sticky;
-        top: 0;
-        padding: 0 20px 20px;
-        z-index: $overlay;
-        background-color: $bg-white;
-        button{
-            display: none;
-        }
-        ul{
-            display: flex;
-            border-radius: 2px;
-            overflow: hidden;
-        }
-        li{
-            flex: 1;
-            height: 4px;
-            background: $brand;
-            &.slick-active{
-                & ~ li{
-                    background-color: #EAE9E9;
-                }
-                border-radius: 0 2px 2px 0;
-            }
-        }
-    }
-    &-step{
-        .page{
-            &-title{
-                margin-top: 12px;
-                padding-inline: 20px;
-            }
-            &-dscpt{
-                margin-top: 8px;
-                padding-inline: 20px;
-            }
-        }
+.sign{
+    &-in{
+        padding: 10px 20px;
         .ipt-wrap{
             margin-top: 64px;
+            .ipt{
+                margin-top: 10px;
+            }
         }
-        .list{
-            padding-inline: 24px;
-        }
-        .ipt{
-            padding-inline: 20px;
-            margin-top: 20px;
+        .btn-wrap{
+            margin-top: 32px;
+            p{
+                margin-top: 100px;
+                font: $label-body;
+                text-align: center;
+                .btn{
+                    margin-left: 8px;
+                }
+            }
         }
     }
-    &-succes{
-        display: flex !important;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        padding-top: calc(var(--vh, 1vh) * 20);
-        .page-title{
-            font: $mb-h2-rg;
-            font-size: 22px;
-            margin-block: 24px 10px;
-        }
+}
+.intro{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+    padding-top: 82px;
+    .page-dscpt{
+        margin-top: 10px;
     }
 }

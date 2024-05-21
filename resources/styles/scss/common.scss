@@ -53,6 +53,8 @@ button {
 }
 
 
+$overlay: 10;
+$overlay-modal: 100;
 $font: 'Noto Sans KR';
 
 /* ===========================================================
@@ -330,6 +332,15 @@ $btn: 500 16px/24px $font;
         background-color: $brand;
         color: $fg-white;
     }
+    &.text{
+        display: inline;
+        background-color: unset;
+        color: $brand;
+        padding: unset;
+        font: inherit;
+        padding-right: 16px;
+        background: url(/resources/icons/ic-btn-text.svg) right 0 center/16px no-repeat;
+    }
 }
 
 .list{
@@ -353,6 +364,70 @@ $btn: 500 16px/24px $font;
         input:checked + span{
             border-color: $brand;
             color: $brand;
+        }
+    }
+}
+
+.setting{
+    &-dots{
+        position: sticky;
+        top: 0;
+        padding: 0 20px 20px;
+        z-index: $overlay;
+        background-color: $bg-white;
+        button{
+            display: none;
+        }
+        ul{
+            display: flex;
+            border-radius: 2px;
+            overflow: hidden;
+        }
+        li{
+            flex: 1;
+            height: 4px;
+            background: $brand;
+            &.slick-active{
+                & ~ li{
+                    background-color: #EAE9E9;
+                }
+                border-radius: 0 2px 2px 0;
+            }
+        }
+    }
+    &-step{
+        .page{
+            &-title{
+                margin-top: 12px;
+                padding-inline: 20px;
+            }
+            &-dscpt{
+                margin-top: 8px;
+                padding-inline: 20px;
+            }
+        }
+        .ipt-wrap{
+            margin-top: 64px;
+        }
+        .list{
+            padding-inline: 24px;
+        }
+        .ipt{
+            padding-inline: 20px;
+            margin-top: 20px;
+        }
+    }
+    &-succes{
+        display: flex !important;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding-top: calc(var(--vh, 1vh) * 20);
+        .page-title{
+            font: $mb-h2-rg;
+            font-size: 22px;
+            margin-block: 24px 10px;
         }
     }
 }

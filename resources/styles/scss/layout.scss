@@ -4,8 +4,6 @@
 $width-device: 420px;
 $height-header: 48px;
 $height-footer: 54px;
-$overlay: 10;
-$overlay-modal: 100;
 
 .wrap{
     max-width: $width-device;
@@ -76,6 +74,13 @@ footer{
                         bottom-right-radius: 24px;
                     }
                 }
+            }
+        }
+        &.vertical{
+            flex-direction: column;
+            gap: 10px;
+            .btn{
+                border-radius: 24px;
             }
         }
     }   

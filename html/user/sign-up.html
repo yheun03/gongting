@@ -33,21 +33,52 @@
 </head>
 <body>
     <div class="wrap">
+        <header>
+            <ul>
+                <li><a href=""><img src="/resources/icons/ic-arrow-left.svg" alt=""></a></li>
+            </ul>
+        </header>
         <section>
-            <div class="intro">
-                <img src="/resources/icons/logo.svg" alt="">
-                <p class="page-title">공팅</p>
-                <p class="page-dscpt">한국공대 블라인드 매칭 서비스</p>
+            <div class="sign-in">
+                <p class="page-title">회원가입</p>
+                <div class="ipt-wrap">
+                    <div class="ipt">
+                        <div>
+                            <input type="text" placeholder="이름을 입력해주세요">
+                        </div>
+                    </div>
+                    <div class="ipt">
+                        <div>
+                            <input type="email" placeholder="이메일을 입력해주세요" inputmode="email">
+                        </div>
+                    </div>
+                    <div class="ipt">
+                        <div>
+                            <input type="number" placeholder="학번을 입력해주세요" inputmode="numeric">
+                        </div>
+                    </div>
+                    <div class="ipt">
+                        <div>
+                            <input type="password" placeholder="비밀번호를 입력해주세요" inputmode="full-width-latin" class="full">
+                            <input type="password" placeholder="비밀번호를 다시 입력해주세요" inputmode="full-width-latin" class="full">
+                        </div>
+                    </div>
+                    <div class="ipt">
+                        <div>
+                            <label><input type="checkbox" name="checkbox"><span>[필수] 서비스 이용 약관에 동의</span></label>
+                        </div>
+                    </div>
+                    <div class="ipt">
+                        <div>
+                            <label><input type="checkbox" name="checkbox"><span>[필수] 개인정보 처리방침에 동의</span></label>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
         <footer>
-            <ul class="vertical">
-                <li>
-                    <a href="/html/user/sign-in.html" class="btn">로그인</a>
-                </li>
-                <li>
-                    <a href="/html/user/sign-up.html" class="btn primary">회원가입</a>
-                </li>
+            <ul>
+                <li><a href="/html/user/sign-up-succes.html" class="btn primary">회원가입하기</a></li>
             </ul>
         </footer>
     </div>
