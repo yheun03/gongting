@@ -8,7 +8,10 @@ $height-footer: 54px;
 .wrap{
     max-width: $width-device;
     width: 100%;
+    height: 100vh;
     margin: auto;
+    display: flex;
+    flex-direction: column;
 }
 
 header{
@@ -46,8 +49,7 @@ header{
     }
 }
 section{
-    min-height: calc(100vh - ($height-header + $height-footer));
-    padding-block: 16px 10px;
+    flex: 1;
     overflow-x: hidden;
 }
 footer{
