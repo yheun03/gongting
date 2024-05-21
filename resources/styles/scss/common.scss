@@ -207,14 +207,14 @@ $btn: 500 16px/24px $font;
     select{
         padding-right: 44px;
         background: url(/resources/icons/ic-arrow-bottom.svg) right 10px center/24px no-repeat;
+        text-indent: unset;
+        padding-left: 16px;
         option{
             font: $mb-t1-rg;
         }
         &:not(:only-child){
             width: fit-content;
             flex: 0;
-            text-indent: unset;
-            padding-left: 16px;
         }
     }
     textarea{
