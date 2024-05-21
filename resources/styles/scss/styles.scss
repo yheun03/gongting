@@ -13,7 +13,11 @@
 }
 .setting{
     &-dots{
-        padding-inline: 20px;
+        position: sticky;
+        top: 0;
+        padding: 0 20px 20px;
+        z-index: $overlay;
+        background-color: $bg-white;
         button{
             display: none;
         }
@@ -37,7 +41,7 @@
     &-step{
         .page{
             &-title{
-                margin-top: 32px;
+                margin-top: 12px;
                 padding-inline: 20px;
             }
             &-dscpt{
@@ -54,6 +58,19 @@
         .ipt{
             padding-inline: 20px;
             margin-top: 20px;
+        }
+    }
+    &-succes{
+        display: flex !important;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding-top: calc(var(--vh, 1vh) * 20);
+        .page-title{
+            font: $mb-h2-rg;
+            font-size: 22px;
+            margin-block: 24px 10px;
         }
     }
 }

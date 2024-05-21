@@ -91,6 +91,7 @@ $mb-t1-sb: $bold 16px/24px $font;
 $mb-t1-rg: $medium 16px/24px $font;
 
 $mb-h2-sb: $bold 24px/34px $font;
+$mb-h2-rg: $medium 24px/34px $font;
 $mb-h3-sb: $bold 20px/28px $font;
 
 $btn: 500 16px/24px $font;
@@ -189,6 +190,7 @@ $btn: 500 16px/24px $font;
     input,
     select,
     textarea{
+        max-width: 100%;
         flex: 1;
         border: unset;
         outline: unset;
@@ -262,31 +264,55 @@ $btn: 500 16px/24px $font;
     .full{
         flex: 100%;
     }
-    &:has(input.box) > div{
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        label{
-            flex: 50%;
-            border: 1px solid $line;
-            border-radius: 10px;
+    &:has(input.box){
+        & > div{
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            label{
+                flex: 50%;
+                border: 1px solid $line;
+                border-radius: 10px;
+                justify-content: center;
+                flex-direction: column;
+                height: 100px;
+                color: $label-teriary;
+                transition: 0.4s;
+                span{
+                    font: $mb-h3-sb;
+                    color: inherit;
+                }
+                p{
+                    font: $label-body;
+                }
+                &:before{
+                    content: unset;
+                }
+                &:has(:checked){
+                    color: $brand;
+                    border-color: $brand;
+                    filter: unset;
+                    img{
+                        transform: scale(1.05);
+                    }
+                }
+            }
+        }
+        .profile{
+            grid-template-columns: repeat(2, 124px);
+            gap: 40px 20px;
             justify-content: center;
-            flex-direction: column;
-            height: 100px;
-            color: $label-teriary;
-            transition: 0.4s;
-            span{
-                font: $mb-h3-sb;
-                color: inherit;
-            }
-            p{
-                font: $label-body;
-            }
-            &:before{
-                content: unset;
-            }
-            &:has(:checked){
-                color: $brand;
-                border-color: $brand;
+            label{
+                border-radius: 50%;
+                height: unset;
+                aspect-ratio: 1;
+                overflow: hidden;
+                filter: grayscale(0.8);
+                img{
+                    width: 100%;
+                    aspect-ratio: 1;
+                    object-fit: contain;
+                    transition: 0.4s;
+                }
             }
         }
     }

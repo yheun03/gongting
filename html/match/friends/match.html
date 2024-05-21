@@ -67,7 +67,7 @@
                         <div class="ipt">
                             <div>
                                 <select name="" id="">
-                                    <option value="kakao" checked hidden>나이</option>
+                                    <option value="kakao" hidden>나이</option>
                                     <option value="naver">00년생 [25살]</option>
                                     <option value="naver">01년생 [24살]</option>
                                     <option value="naver">02년생 [23살]</option>
@@ -123,7 +123,7 @@
                     </div>
                 </div>
                 <div class="setting-step">
-                    <p class="page-title">선호하는 상대방의<br/>취미를 선택 해 주세요</p>
+                    <p class="page-title">선호하는 상대방의<br/>취미를 선택해 주세요</p>
                     <p class="page-dscpt">최대 5개 선택할 수 있어요.</p>
                     <div class="ipt-wrap">
                         <div class="list tag">
@@ -158,7 +158,7 @@
                     </div>
                 </div>
                 <div class="setting-step">
-                    <p class="page-title">선호하는 상대방의<br/>특성을 선택 해 주세요</p>
+                    <p class="page-title">선호하는 상대방의<br/>특성을 선택해 주세요</p>
                     <p class="page-dscpt">최대 5개 선택할 수 있어요.</p>
                     <div class="ipt-wrap">
                         <div class="list tag">
@@ -192,6 +192,11 @@
                         </div>
                     </div>
                 </div>
+                <div class="setting-succes">
+                    <img src="/resources/icons/ic-match-succes.svg" alt="">
+                    <p class="page-title"><b>친구 매칭 신청</b>이<br/>완료되었습니다.</p>
+                    <p class="page-dscpt">매칭 결과를 기다려주세요</p>
+                </div>
             </div>
         </section>
         <footer>
@@ -205,23 +210,5 @@
             </ul>
         </footer>
     </div>
-    <script>
-        $(document).ready(function(){
-            var $setting = $('.setting');
-            var $dotsButton = $('.setting-dots')
-            var $prevButton = $('.setting-prev');
-            var $nextButton = $('.setting-next');
-            
-            $setting.slick({
-                dots: true,
-                appendDots: $dotsButton,
-                prevArrow: $prevButton,
-                nextArrow: $nextButton,
-                infinite: false,
-                swipe: false,           // 터치 스와이프 비활성화
-                draggable: false        // 마우스 드래그 비활성화
-            });
-        });
-    </script>
 </body>
 </html>

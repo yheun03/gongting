@@ -51,24 +51,17 @@
                     <div class="ipt-wrap">
                         <div class="ipt">
                             <div>
-                                <label><input type="radio" name="radio2" class="box"><span>남성</span></label>
-                                <label><input type="radio" name="radio2" class="box"><span>여성</span></label>
+                                <select name="" id="">
+                                    <option value="kakao" hidden>성별을 선택해주세요</option>
+                                    <option value="men">남성</option>
+                                    <option value="women">여성</option>
+                                </select>
                             </div>
                         </div>
-                        <div class="ipt">
-                            <div>
-                                <label><input type="checkbox" name="checkbox"><span>상관없음</span></label>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="setting-step">
-                    <p class="page-title">매칭 시 선호하는<br/>나이가 있으신가요?</p>
-                    <div class="ipt-wrap">
                         <div class="ipt">
                             <div>
                                 <select name="" id="">
-                                    <option value="kakao" checked hidden>나이</option>
+                                    <option value="kakao" checked hidden>나이를 선택해주세요</option>
                                     <option value="naver">00년생 [25살]</option>
                                     <option value="naver">01년생 [24살]</option>
                                     <option value="naver">02년생 [23살]</option>
@@ -80,29 +73,110 @@
                         </div>
                         <div class="ipt">
                             <div>
-                                <label><input type="checkbox" name="checkbox"><span>상관없음</span></label>
+                                <select name="">
+                                    <optgroup label="SW대학">
+                                        <option value="">컴퓨터공학부-컴퓨터공학전공</option>
+                                        <option value="">컴퓨터공학부-소프트웨어전공</option>
+                                        <option value="">게임공학과</option>
+                                        <option value="">인공지능학과</option>
+                                    </optgroup>
+                                    <optgroup label="IT반도체융햡대학">
+                                        <option value="">전자공학부-전자공학전공</option>
+                                        <option value="">전자공학부-임베디드시스템전공</option>
+                                        <option value="">반도체공학부-나노반도체공학전공</option>
+                                        <option value="">반도체공학부-반도체시스템전공</option>
+                                    </optgroup>
+                                    <optgroup label="스마트기계융합대학">
+                                        <option value="">기계공학과</option>
+                                        <option value="">기계설계공학부-기계설계전공</option>
+                                        <option value="">기계설계공학부-지능형모빌리티전공</option>
+                                        <option value="">메카트로닉스공학부-메카트로닉스전공</option>
+                                        <option value="">메카트로닉스공학부-AI로봇전공</option>
+                                    </optgroup>
+                                    <optgroup label="첨단융합대학">
+                                        <option value="">신소재공학과</option>
+                                        <option value="">생명화학공학과</option>
+                                        <option value="">에너지·전기공학부-전력응용시스템전공</option>
+                                        <option value="">에너지·전기공학부-미래에너지시스템전공</option>
+                                    </optgroup>
+                                    <optgroup label="경영학부">
+                                        <option value="">경영학전공</option>
+                                        <option value="">데이터사이언스경영전공</option>
+                                        <option value="">IT경영전공</option>
+                                    </optgroup>
+                                    <optgroup label="디자인공학부">
+                                        <option value="">산업디자인공학전공</option>
+                                        <option value="">미디어디자인공학전공</option>
+                                    </optgroup>
+                                    <optgroup label="미래대학">
+                                        <option value="">융합전공</option>
+                                        <option value="">자유전공학부</option>
+                                    </optgroup>
+                                    <optgroup label="기업인재대학">
+                                        <option value="">산학협력학부</option>
+                                        <option value="">일학습병행학부</option>
+                                        <option value="">조기취업학부</option>
+                                    </optgroup>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="ipt">
+                            <div>
+                                <select name="" id="">
+                                    <option value="none" checked hidden>학년을 선택해주세요</option>
+                                    <option value="1">1학년</option>
+                                    <option value="2">2학년</option>
+                                    <option value="3">3학년</option>
+                                    <option value="4">4학년</option>
+                                    <option value="5">초과학년</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="ipt">
+                            <div>
+                                <select name="" id="">
+                                    <option value="" hidden>흡연여부를 선택해주세요</option>
+                                    <option value="">흡연</option>
+                                    <option value="">비흡연</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="ipt">
+                            <div>
+                                <select name="" id="">
+                                    <option value="kakao">카카오톡</option>
+                                    <option value="naver">네이버</option>
+                                </select>
+                                <input type="text" placeholder="ID">
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="setting-step">
-                    <p class="page-title">선호하는 상대방의<br/>흡연 여부를 선택해주세요</p>
+                    <p class="page-title">프로필에 사용할<br/>캐릭터를 선택해주세요.</p>
                     <div class="ipt-wrap">
                         <div class="ipt">
-                            <div>
-                                <label><input type="radio" name="radio2" class="box"><span>흡연자</span></label>
-                                <label><input type="radio" name="radio2" class="box"><span>비흡연자</span></label>
-                            </div>
-                        </div>
-                        <div class="ipt">
-                            <div>
-                                <label><input type="checkbox" name="checkbox"><span>상관없음</span></label>
+                            <div class="profile">
+                                <label><input type="radio" name="profile" class="box"><img src="/resources/images/profile-01.png" alt=""></input></label>
+                                <label><input type="radio" name="profile" class="box"><img src="/resources/images/profile-02.png" alt=""></input></label>
+                                <label><input type="radio" name="profile" class="box"><img src="/resources/images/profile-03.png" alt=""></input></label>
+                                <label><input type="radio" name="profile" class="box"><img src="/resources/images/profile-04.png" alt=""></input></label>
+                                <label><input type="radio" name="profile" class="box"><img src="/resources/images/profile-05.png" alt=""></input></label>
+                                <label><input type="radio" name="profile" class="box"><img src="/resources/images/profile-06.png" alt=""></input></label>
+                                <label><input type="radio" name="profile" class="box"><img src="/resources/images/profile-07.png" alt=""></input></label>
+                                <label><input type="radio" name="profile" class="box"><img src="/resources/images/profile-08.png" alt=""></input></label>
+                                <label><input type="radio" name="profile" class="box"><img src="/resources/images/profile-09.png" alt=""></input></label>
+                                <label><input type="radio" name="profile" class="box"><img src="/resources/images/profile-10.png" alt=""></input></label>
+                                <label><input type="radio" name="profile" class="box"><img src="/resources/images/profile-11.png" alt=""></input></label>
+                                <label><input type="radio" name="profile" class="box"><img src="/resources/images/profile-12.png" alt=""></input></label>
+                                <label><input type="radio" name="profile" class="box"><img src="/resources/images/profile-13.png" alt=""></input></label>
+                                <label><input type="radio" name="profile" class="box"><img src="/resources/images/profile-14.png" alt=""></input></label>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="setting-step">
-                    <p class="page-title">선호하는 MBTI를 알려주세요</p>
+                    <p class="page-title">MBTI를 알려주세요</p>
                     <div class="ipt-wrap">
                         <div class="ipt">
                             <div>
@@ -116,82 +190,90 @@
                                 <label><input type="radio" name="jp" value="p" class="box"><span>P</span><p>인식형</p></label>
                             </div>
                         </div>
+                    </div>
+                </div>
+                <div class="setting-step">
+                    <p class="page-title">나의 취미를<br/>선택해 주세요</p>
+                    <p class="page-dscpt">최대 5개 선택할 수 있어요.</p>
+                    <div class="ipt-wrap">
+                        <div class="list tag">
+                            <label><input type="checkbox" name="hobby"><span>##</span></label>
+                            <label><input type="checkbox" name="hobby"><span>###</span></label>
+                            <label><input type="checkbox" name="hobby"><span>#######</span></label>
+                            <label><input type="checkbox" name="hobby"><span>####</span></label>
+                            <label><input type="checkbox" name="hobby"><span>##</span></label>
+                            <label><input type="checkbox" name="hobby"><span>#######</span></label>
+                            <label><input type="checkbox" name="hobby"><span>###</span></label>
+                            <label><input type="checkbox" name="hobby"><span>####</span></label>
+                            <label><input type="checkbox" name="hobby"><span>##</span></label>
+                            <label><input type="checkbox" name="hobby"><span>###</span></label>
+                            <label><input type="checkbox" name="hobby"><span>#######</span></label>
+                            <label><input type="checkbox" name="hobby"><span>##</span></label>
+                            <label><input type="checkbox" name="hobby"><span>###</span></label>
+                            <label><input type="checkbox" name="hobby"><span>##</span></label>
+                            <label><input type="checkbox" name="hobby"><span>#####</span></label>
+                            <label><input type="checkbox" name="hobby"><span>####</span></label>
+                            <label><input type="checkbox" name="hobby"><span>###</span></label>
+                            <label><input type="checkbox" name="hobby"><span>#####</span></label>
+                            <label><input type="checkbox" name="hobby"><span>####</span></label>
+                            <label><input type="checkbox" name="hobby"><span>#####</span></label>
+                            <label><input type="checkbox" name="hobby"><span>###</span></label>
+                            <label><input type="checkbox" name="hobby"><span>#######</span></label>
+                            <label><input type="checkbox" name="hobby"><span>##</span></label>
+                            <label><input type="checkbox" name="hobby"><span>#####</span></label>
+                            <label><input type="checkbox" name="hobby"><span>##</span></label>
+                            <label><input type="checkbox" name="hobby"><span>###</span></label>
+                            <label><input type="checkbox" name="hobby"><span>#######</span></label>
+                        </div>
+                    </div>
+                </div>
+                <div class="setting-step">
+                    <p class="page-title">나의 특성을<br/>선택해 주세요</p>
+                    <p class="page-dscpt">최대 5개 선택할 수 있어요.</p>
+                    <div class="ipt-wrap">
+                        <div class="list tag">
+                            <label><input type="checkbox" name="distinct"><span>##</span></label>
+                            <label><input type="checkbox" name="distinct"><span>###</span></label>
+                            <label><input type="checkbox" name="distinct"><span>#######</span></label>
+                            <label><input type="checkbox" name="distinct"><span>####</span></label>
+                            <label><input type="checkbox" name="distinct"><span>##</span></label>
+                            <label><input type="checkbox" name="distinct"><span>#######</span></label>
+                            <label><input type="checkbox" name="distinct"><span>###</span></label>
+                            <label><input type="checkbox" name="distinct"><span>####</span></label>
+                            <label><input type="checkbox" name="distinct"><span>##</span></label>
+                            <label><input type="checkbox" name="distinct"><span>###</span></label>
+                            <label><input type="checkbox" name="distinct"><span>#######</span></label>
+                            <label><input type="checkbox" name="distinct"><span>##</span></label>
+                            <label><input type="checkbox" name="distinct"><span>###</span></label>
+                            <label><input type="checkbox" name="distinct"><span>##</span></label>
+                            <label><input type="checkbox" name="distinct"><span>#####</span></label>
+                            <label><input type="checkbox" name="distinct"><span>####</span></label>
+                            <label><input type="checkbox" name="distinct"><span>###</span></label>
+                            <label><input type="checkbox" name="distinct"><span>#####</span></label>
+                            <label><input type="checkbox" name="distinct"><span>####</span></label>
+                            <label><input type="checkbox" name="distinct"><span>#####</span></label>
+                            <label><input type="checkbox" name="distinct"><span>###</span></label>
+                            <label><input type="checkbox" name="distinct"><span>#######</span></label>
+                            <label><input type="checkbox" name="distinct"><span>##</span></label>
+                            <label><input type="checkbox" name="distinct"><span>#####</span></label>
+                            <label><input type="checkbox" name="distinct"><span>##</span></label>
+                            <label><input type="checkbox" name="distinct"><span>###</span></label>
+                            <label><input type="checkbox" name="distinct"><span>#######</span></label>
+                        </div>
+                    </div>
+                </div>
+                <div class="setting-step">
+                    <p class="page-title">나를 한 줄로<br/>표현해볼까요?</p>
+                    <div class="ipt-wrap">
                         <div class="ipt">
-                            <div>
-                                <label><input type="checkbox" name="checkbox"><span>상관없음</span></label>
-                            </div>
+                            <div><input type="text" placeholder="한줄소개를 입력해주세요"></div>
                         </div>
                     </div>
                 </div>
-                <div class="setting-step">
-                    <p class="page-title">선호하는 상대방의<br/>취미를 선택 해 주세요</p>
-                    <p class="page-dscpt">최대 5개 선택할 수 있어요.</p>
-                    <div class="ipt-wrap">
-                        <div class="list tag">
-                            <label><input type="checkbox" name="hobby"><span>##</span></label>
-                            <label><input type="checkbox" name="hobby"><span>###</span></label>
-                            <label><input type="checkbox" name="hobby"><span>#######</span></label>
-                            <label><input type="checkbox" name="hobby"><span>####</span></label>
-                            <label><input type="checkbox" name="hobby"><span>##</span></label>
-                            <label><input type="checkbox" name="hobby"><span>#######</span></label>
-                            <label><input type="checkbox" name="hobby"><span>###</span></label>
-                            <label><input type="checkbox" name="hobby"><span>####</span></label>
-                            <label><input type="checkbox" name="hobby"><span>##</span></label>
-                            <label><input type="checkbox" name="hobby"><span>###</span></label>
-                            <label><input type="checkbox" name="hobby"><span>#######</span></label>
-                            <label><input type="checkbox" name="hobby"><span>##</span></label>
-                            <label><input type="checkbox" name="hobby"><span>###</span></label>
-                            <label><input type="checkbox" name="hobby"><span>##</span></label>
-                            <label><input type="checkbox" name="hobby"><span>#####</span></label>
-                            <label><input type="checkbox" name="hobby"><span>####</span></label>
-                            <label><input type="checkbox" name="hobby"><span>###</span></label>
-                            <label><input type="checkbox" name="hobby"><span>#####</span></label>
-                            <label><input type="checkbox" name="hobby"><span>####</span></label>
-                            <label><input type="checkbox" name="hobby"><span>#####</span></label>
-                            <label><input type="checkbox" name="hobby"><span>###</span></label>
-                            <label><input type="checkbox" name="hobby"><span>#######</span></label>
-                            <label><input type="checkbox" name="hobby"><span>##</span></label>
-                            <label><input type="checkbox" name="hobby"><span>#####</span></label>
-                            <label><input type="checkbox" name="hobby"><span>##</span></label>
-                            <label><input type="checkbox" name="hobby"><span>###</span></label>
-                            <label><input type="checkbox" name="hobby"><span>#######</span></label>
-                        </div>
-                    </div>
-                </div>
-                <div class="setting-step">
-                    <p class="page-title">선호하는 상대방의<br/>특성을 선택 해 주세요</p>
-                    <p class="page-dscpt">최대 5개 선택할 수 있어요.</p>
-                    <div class="ipt-wrap">
-                        <div class="list tag">
-                            <label><input type="checkbox" name="distinct"><span>##</span></label>
-                            <label><input type="checkbox" name="distinct"><span>###</span></label>
-                            <label><input type="checkbox" name="distinct"><span>#######</span></label>
-                            <label><input type="checkbox" name="distinct"><span>####</span></label>
-                            <label><input type="checkbox" name="distinct"><span>##</span></label>
-                            <label><input type="checkbox" name="distinct"><span>#######</span></label>
-                            <label><input type="checkbox" name="distinct"><span>###</span></label>
-                            <label><input type="checkbox" name="distinct"><span>####</span></label>
-                            <label><input type="checkbox" name="distinct"><span>##</span></label>
-                            <label><input type="checkbox" name="distinct"><span>###</span></label>
-                            <label><input type="checkbox" name="distinct"><span>#######</span></label>
-                            <label><input type="checkbox" name="distinct"><span>##</span></label>
-                            <label><input type="checkbox" name="distinct"><span>###</span></label>
-                            <label><input type="checkbox" name="distinct"><span>##</span></label>
-                            <label><input type="checkbox" name="distinct"><span>#####</span></label>
-                            <label><input type="checkbox" name="distinct"><span>####</span></label>
-                            <label><input type="checkbox" name="distinct"><span>###</span></label>
-                            <label><input type="checkbox" name="distinct"><span>#####</span></label>
-                            <label><input type="checkbox" name="distinct"><span>####</span></label>
-                            <label><input type="checkbox" name="distinct"><span>#####</span></label>
-                            <label><input type="checkbox" name="distinct"><span>###</span></label>
-                            <label><input type="checkbox" name="distinct"><span>#######</span></label>
-                            <label><input type="checkbox" name="distinct"><span>##</span></label>
-                            <label><input type="checkbox" name="distinct"><span>#####</span></label>
-                            <label><input type="checkbox" name="distinct"><span>##</span></label>
-                            <label><input type="checkbox" name="distinct"><span>###</span></label>
-                            <label><input type="checkbox" name="distinct"><span>#######</span></label>
-                        </div>
-                    </div>
+                <div class="setting-succes">
+                    <img src="/resources/icons/ic-match-succes.svg" alt="">
+                    <p class="page-title"><b>친구 매칭 신청</b>이<br/>완료되었습니다.</p>
+                    <p class="page-dscpt">매칭 결과를 기다려주세요</p>
                 </div>
             </div>
         </section>
@@ -206,23 +288,5 @@
             </ul>
         </footer>
     </div>
-    <script>
-        $(document).ready(function(){
-            var $setting = $('.setting');
-            var $dotsButton = $('.setting-dots')
-            var $prevButton = $('.setting-prev');
-            var $nextButton = $('.setting-next');
-            
-            $setting.slick({
-                dots: true,
-                appendDots: $dotsButton,
-                prevArrow: $prevButton,
-                nextArrow: $nextButton,
-                infinite: false,
-                swipe: false,           // 터치 스와이프 비활성화
-                draggable: false        // 마우스 드래그 비활성화
-            });
-        });
-    </script>
 </body>
 </html>
