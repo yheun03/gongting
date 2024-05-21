@@ -12,24 +12,48 @@
     }
 }
 .match{
-    .page{
-        &-title{
-            margin-top: 32px;
-            padding-inline: 20px;
-        }
-        &-dscpt{
-            margin-top: 8px;
-            padding-inline: 20px;
-        }
-    }
-    .ipt-wrap{
-        margin-top: 64px;
-    }
-    .list{
-        padding-inline: 24px;
-    }
-    .ipt{
+    &-dots{
         padding-inline: 20px;
-        margin-top: 20px;
+        button{
+            display: none;
+        }
+        ul{
+            display: flex;
+            border-radius: 2px;
+            overflow: hidden;
+        }
+        li{
+            flex: 1;
+            height: 4px;
+            background: $brand;
+            &.slick-active{
+                & ~ li{
+                    background-color: #EAE9E9;
+                }
+                border-radius: 0 2px 2px 0;
+            }
+        }
+    }
+    &-step{
+        .page{
+            &-title{
+                margin-top: 32px;
+                padding-inline: 20px;
+            }
+            &-dscpt{
+                margin-top: 8px;
+                padding-inline: 20px;
+            }
+        }
+        .ipt-wrap{
+            margin-top: 64px;
+        }
+        .list{
+            padding-inline: 24px;
+        }
+        .ipt{
+            padding-inline: 20px;
+            margin-top: 20px;
+        }
     }
 }

@@ -1337,6 +1337,7 @@ button {
   flex-direction: column;
   height: 100px;
   color: #898989;
+  transition: 0.4s;
 }
 .ipt:has(input.box) > div label span {
   font: 600 20px/28px "Noto Sans KR";
@@ -1397,12 +1398,10 @@ button {
 }
 
 header {
-  position: sticky;
-  top: 0;
-  padding-inline: 10px;
+  padding: 44px 10px 0;
   background-color: #ffffff;
-  z-index: 10;
   color: #111111;
+  z-index: 10;
 }
 header,
 header ul {
@@ -1438,15 +1437,12 @@ section {
 }
 
 footer {
-  position: sticky;
-  min-height: 54px;
-  bottom: 0;
   background-color: #ffffff;
   z-index: 10;
 }
 footer ul {
   display: flex;
-  padding: 12px 20px;
+  padding: 12px 20px 40px;
 }
 footer ul li {
   flex: 1;

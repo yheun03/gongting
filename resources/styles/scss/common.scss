@@ -267,6 +267,7 @@ $btn: 500 16px/24px $font;
             flex-direction: column;
             height: 100px;
             color: $label-teriary;
+            transition: 0.4s;
             span{
                 font: $mb-h3-sb;
                 color: inherit;
@@ -315,6 +316,11 @@ $btn: 500 16px/24px $font;
             padding: 6px 14px;
             border: 1px solid $line;
             border-radius: 14px;
+            transition: 0.4s;
+        }
+        input:checked + span{
+            border-color: $brand;
+            color: $brand;
         }
     }
 }

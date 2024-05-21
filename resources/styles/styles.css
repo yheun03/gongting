@@ -1337,6 +1337,7 @@ button {
   flex-direction: column;
   height: 100px;
   color: #898989;
+  transition: 0.4s;
 }
 .ipt:has(input.box) > div label span {
   font: 600 20px/28px "Noto Sans KR";
@@ -1385,6 +1386,11 @@ button {
   padding: 6px 14px;
   border: 1px solid #E3E3E3;
   border-radius: 14px;
+  transition: 0.4s;
+}
+.list.tag input:checked + span {
+  border-color: #7D67FF;
+  color: #7D67FF;
 }
 
 .wrap {
@@ -1397,12 +1403,10 @@ button {
 }
 
 header {
-  position: sticky;
-  top: 0;
-  padding-inline: 10px;
+  padding: 44px 10px 0;
   background-color: #ffffff;
-  z-index: 10;
   color: #111111;
+  z-index: 10;
 }
 header,
 header ul {
@@ -1438,15 +1442,12 @@ section {
 }
 
 footer {
-  position: sticky;
-  min-height: 54px;
-  bottom: 0;
   background-color: #ffffff;
   z-index: 10;
 }
 footer ul {
   display: flex;
-  padding: 12px 20px;
+  padding: 12px 20px 40px;
 }
 footer ul li {
   flex: 1;
@@ -1472,21 +1473,43 @@ footer .btn {
   color: #898989;
 }
 
-.match .page-title {
+.match-dots {
+  padding-inline: 20px;
+}
+.match-dots button {
+  display: none;
+}
+.match-dots ul {
+  display: flex;
+  border-radius: 2px;
+  overflow: hidden;
+}
+.match-dots li {
+  flex: 1;
+  height: 4px;
+  background: #7D67FF;
+}
+.match-dots li.slick-active {
+  border-radius: 0 2px 2px 0;
+}
+.match-dots li.slick-active ~ li {
+  background-color: #EAE9E9;
+}
+.match-step .page-title {
   margin-top: 32px;
   padding-inline: 20px;
 }
-.match .page-dscpt {
+.match-step .page-dscpt {
   margin-top: 8px;
   padding-inline: 20px;
 }
-.match .ipt-wrap {
+.match-step .ipt-wrap {
   margin-top: 64px;
 }
-.match .list {
+.match-step .list {
   padding-inline: 24px;
 }
-.match .ipt {
+.match-step .ipt {
   padding-inline: 20px;
   margin-top: 20px;
 }/*# sourceMappingURL=styles.css.map */

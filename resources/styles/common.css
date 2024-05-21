@@ -1337,6 +1337,7 @@ button {
   flex-direction: column;
   height: 100px;
   color: #898989;
+  transition: 0.4s;
 }
 .ipt:has(input.box) > div label span {
   font: 600 20px/28px "Noto Sans KR";
@@ -1385,4 +1386,9 @@ button {
   padding: 6px 14px;
   border: 1px solid #E3E3E3;
   border-radius: 14px;
+  transition: 0.4s;
+}
+.list.tag input:checked + span {
+  border-color: #7D67FF;
+  color: #7D67FF;
 }/*# sourceMappingURL=common.css.map */

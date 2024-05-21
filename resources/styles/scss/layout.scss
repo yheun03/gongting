@@ -4,6 +4,8 @@
 $width-device: 420px;
 $height-header: 48px;
 $height-footer: 54px;
+$overlay: 10;
+$overlay-modal: 100;
 
 .wrap{
     max-width: $width-device;
@@ -15,12 +17,10 @@ $height-footer: 54px;
 }
 
 header{
-    position: sticky;
-    top: 0;
-    padding-inline: 10px;
+    padding: 44px 10px 0;
     background-color: $bg-white;
-    z-index: 10;
     color: $fg-black;
+    z-index: $overlay;
     &,
     ul{
         display: flex;
@@ -53,14 +53,11 @@ section{
     overflow-x: hidden;
 }
 footer{
-    position: sticky;
-    min-height: $height-footer;
-    bottom: 0;
     background-color: $bg-white;
-    z-index: 10;
+    z-index: $overlay;
     ul{
         display: flex;
-        padding: 12px 20px;
+        padding: 12px 20px 40px;
         li{
             flex: 1;
             &:first-child{
