@@ -89,15 +89,20 @@ $bold: 600;
 $label-title: $medium 14px/18px $font;
 $label-body: $medium 12px/20px $font;
 
+$mb-c3-sb: $bold 18px/24px $font;
 $mb-t1-sb: $bold 16px/24px $font;
 $mb-t1-rg: $medium 16px/24px $font;
+$mb-t2-sb: $bold 14px/18px $font;
+$mb-b1-rg: $medium 12px/18px $font;
 $mb-b3-rg: $medium 10px/16px $font;
 
 $mb-h2-sb: $bold 24px/34px $font;
 $mb-h2-rg: $medium 24px/34px $font;
 $mb-h3-sb: $bold 20px/28px $font;
+$mb-h3-rg: $medium 20px/28px $font;
 
-$btn: 500 16px/24px $font;
+$btn: $medium 16px/24px $font;
+$btn-sm: $medium 12px/18px $font;
 
 // NOTE: 데이트피커 커스텀
 .ui-datepicker{
@@ -207,6 +212,31 @@ $btn: 500 16px/24px $font;
         resize: none;
         &::placeholder{
             color: $label-secondary;
+        }
+    }
+    &:has(input[type=file]){
+        .full{
+            margin-bottom: 10px;
+        }
+        & > div{
+            gap: unset;
+            input[type=file]{
+                border-top-right-radius: unset;
+                border-bottom-right-radius: unset;
+                border-right: unset;
+                & + label{
+                    width: fit-content;
+                    border-radius: 0 10px 10px 0;
+                    border: 1px solid $brand;
+                    height: 50px;
+                    &:before{
+                        content: unset;
+                    }
+                }
+                &::file-selector-button {
+                    display: none;
+                }
+            }
         }
     }
     select{
@@ -329,9 +359,16 @@ $btn: 500 16px/24px $font;
     padding: 13.5px 16px;
     text-align: center;
     border-radius: 24px;
+    outline: unset;
+    border: unset;
     &.primary{
         background-color: $brand;
         color: $fg-white;
+    }
+    &.sm{
+        display: inline-block;
+        font: $btn-sm;
+        padding: 6.5px 16px;
     }
     &.text{
         display: inline;
@@ -344,30 +381,6 @@ $btn: 500 16px/24px $font;
     }
 }
 
-.list{
-    display: flex;
-    &.tag{
-        flex-wrap: wrap;
-        gap: 10px 6px;
-        justify-content: center;
-        input{
-            display: none;
-        }
-        span{
-            display: block;
-            font: $label-body;
-            color: $label-secondary;
-            padding: 6px 14px;
-            border: 1px solid $line;
-            border-radius: 14px;
-            transition: 0.4s;
-        }
-        input:checked + span{
-            border-color: $brand;
-            color: $brand;
-        }
-    }
-}
 
 .setting{
     &-dots{

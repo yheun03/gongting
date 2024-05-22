@@ -59,6 +59,11 @@ footer{
         padding: 12px 20px 40px;
         li{
             flex: 1;
+            &:only-child{
+                .btn{
+                    width: 100%;
+                }
+            }
             &:first-child{
                 .btn{
                     border: {
