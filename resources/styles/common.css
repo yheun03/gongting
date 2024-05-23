@@ -1,4 +1,3 @@
-@charset "UTF-8";
 /*
 Copyright (c) 2021 Kil Hyung-jin, with Reserved Font Name Pretendard.
 https://github.com/orioncactus/pretendard
@@ -119,323 +118,113 @@ button {
   outline: unset;
 }
 
-/* ===========================================================
-   Section: SCSS 변수 - 전경색
-   Description: 전경색 정의를 위한 SCSS 변수 설정
-   Author: yhEun
-   Date: 2024.05.16
-   =========================================================== */
-/* ===========================================================
-   Section: SCSS 변수 - 배경색 [background]
-   Description: 배경색 정의를 위한 SCSS 변수 설정
-   Author: yhEun
-   Date: 2024.05.16
-   =========================================================== */
-.ui-datepicker-header {
-  display: flex;
-  align-items: center;
-}
-.ui-datepicker-header .ui-corner-all {
-  text-indent: -9999px;
-  width: 48px;
-  aspect-ratio: 1;
-  background: url(/resources/images/icons/datepicker/ic-prev.svg) center/24px no-repeat;
-}
-.ui-datepicker-header .ui-corner-all.ui-datepicker-next {
-  background-image: url(/resources/images/icons/datepicker/ic-next.svg);
-}
-.ui-datepicker-header .ui-datepicker-title {
-  order: -1;
-  margin-right: auto;
-}
-.ui-datepicker-header .ui-datepicker-title select {
-  font: 400 14px/20px "Noto Sans KR";
-  letter-spacing: -0.025em;
-  color: #111111;
-  padding: 10px 8px;
+input, button, textarea {
   border: unset;
-}
-.ui-datepicker-calendar {
-  width: 100%;
-}
-.ui-datepicker-calendar tr > * {
-  position: relative;
-  font: 400 16px/24px "Noto Sans KR";
-  letter-spacing: -0.025em;
-  color: #111111;
-  padding-block: 12px;
-  text-align: center;
-}
-.ui-datepicker-calendar tr > * a {
-  color: inherit;
-}
-.ui-datepicker-calendar td.ui-datepicker-today::before, .ui-datepicker-calendar td.ui-datepicker-current-day::before {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 32px;
-  aspect-ratio: 1;
-  border-radius: 50%;
-  border: 1px solid #7D67FF;
-  z-index: -1;
-}
-.ui-datepicker-calendar td.ui-datepicker-today {
-  color: #7D67FF;
-}
-.ui-datepicker-calendar td.ui-datepicker-current-day {
-  color: #ffffff !important;
-}
-.ui-datepicker-calendar td.ui-datepicker-current-day::before {
-  background-color: #7D67FF;
+  outline: unset;
+  box-sizing: border-box;
 }
 
-/* ===========================================================
-   Section: 인풋 컴포넌트
-   Description: 인풋 컴포넌트 [input;select;checkbox;radio;textarea]
-   Author: yhEun
-   Date: 2024.05.16
-   =========================================================== */
+.page-title {
+  padding: 16px 20px 0;
+}
+.page-title h2 {
+  font: 700 24px/34px "Pretendard";
+  color: #111111;
+}
+.page-title p {
+  font: 400 14px/18px "Pretendard";
+  color: #767676;
+}
+.page-title.type-center {
+  text-align: center;
+}
+
+.ipt-wrap {
+  margin-top: 32px;
+  padding: 20px;
+}
 .ipt span {
-  display: block;
-  font: 400 14px/18px "Noto Sans KR";
+  font: 400 12px/18px "Pretendard";
   color: #111111;
 }
 .ipt span + div {
-  margin-top: 6px;
-}
-.ipt input,
-.ipt select,
-.ipt textarea {
-  max-width: 100%;
-  flex: 1;
-  border: unset;
-  outline: unset;
-  font: 400 12px/20px "Noto Sans KR";
-  padding: 14px 16px 14px 0;
-  background-color: #ffffff;
-  border: 1px solid #E3E3E3;
-  border-radius: 10px;
-  text-indent: 16px;
-  appearance: unset;
-  resize: none;
-}
-.ipt input::placeholder,
-.ipt select::placeholder,
-.ipt textarea::placeholder {
-  color: #5F5F5F;
-}
-.ipt:has(input[type=file]) .full {
-  margin-bottom: 10px;
-}
-.ipt:has(input[type=file]) > div {
-  gap: unset;
-}
-.ipt:has(input[type=file]) > div input[type=file] {
-  border-top-right-radius: unset;
-  border-bottom-right-radius: unset;
-  border-right: unset;
-}
-.ipt:has(input[type=file]) > div input[type=file] + label {
-  width: fit-content;
-  border-radius: 0 10px 10px 0;
-  border: 1px solid #7D67FF;
-  height: 50px;
-}
-.ipt:has(input[type=file]) > div input[type=file] + label:before {
-  content: unset;
-}
-.ipt:has(input[type=file]) > div input[type=file]::file-selector-button {
-  display: none;
-}
-.ipt select {
-  padding-right: 44px;
-  background: url(/resources/icons/ic-arrow-bottom.svg) right 10px center/24px no-repeat;
-  text-indent: unset;
-  padding-left: 16px;
-}
-.ipt select option {
-  font: 400 16px/24px "Noto Sans KR";
-}
-.ipt select:not(:only-child) {
-  width: fit-content;
-  flex: 0;
-}
-.ipt textarea {
-  text-indent: unset;
-  padding-left: 16px;
+  margin-top: 8px;
 }
 .ipt > div {
-  flex-wrap: wrap;
-}
-.ipt > div,
-.ipt label {
   display: flex;
-  align-items: center;
+  flex-wrap: wrap;
   gap: 6px;
 }
-.ipt label [type=checkbox],
-.ipt label [type=radio] {
-  display: none;
+.ipt > div input,
+.ipt > div select,
+.ipt > div textarea {
+  flex: 1;
+  padding: 13px 16px 15px 0;
+  text-indent: 16px;
+  font: 400 14px/18px "Pretendard";
+  color: #111111;
+  border: 1px solid #F1F1F5;
+  border-radius: 8px;
+  appearance: none;
 }
-.ipt label span {
-  color: #5F5F5F;
-}
-.ipt label:before {
-  display: block;
-  content: "";
-  font-size: 14px;
-  width: 1em;
-  aspect-ratio: 1;
-  border: 1px solid #7D67FF;
-  border-radius: 2px;
-  margin: 5px 4px 5px 5px;
-  box-sizing: border-boxs;
-  background: url(/resources/icons/ic-check.svg) 0 center/2em no-repeat;
-}
-.ipt label:has(:checked):before {
-  background-color: #7D67FF;
-  background-position-x: -1em;
-}
-.ipt .full {
+.ipt > div input.full,
+.ipt > div select.full,
+.ipt > div textarea.full {
   flex: 100%;
 }
-.ipt:has(input.box) > div {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+.ipt > div select {
+  padding-inline: 16px 48px;
+  text-indent: unset;
+  background: url(/resources/icons/ic-selectbox.svg) right 16px center/16px no-repeat;
 }
-.ipt:has(input.box) > div label {
-  flex: 50%;
-  border: 1px solid #E3E3E3;
-  border-radius: 10px;
-  justify-content: center;
-  flex-direction: column;
-  height: 100px;
-  color: #898989;
-  transition: 0.4s;
-}
-.ipt:has(input.box) > div label span {
-  font: 600 20px/28px "Noto Sans KR";
-  color: inherit;
-}
-.ipt:has(input.box) > div label p {
-  font: 400 12px/20px "Noto Sans KR";
-}
-.ipt:has(input.box) > div label:before {
-  content: unset;
-}
-.ipt:has(input.box) > div label:has(:checked) {
-  color: #7D67FF;
-  border-color: #7D67FF;
-  filter: unset;
-}
-.ipt:has(input.box) > div label:has(:checked) img {
-  transform: scale(1.05);
-}
-.ipt:has(input.box) .profile {
-  grid-template-columns: repeat(2, 124px);
-  gap: 40px 20px;
-  justify-content: center;
-}
-.ipt:has(input.box) .profile label {
-  border-radius: 50%;
-  height: unset;
-  aspect-ratio: 1;
-  overflow: hidden;
-  filter: grayscale(0.8);
-}
-.ipt:has(input.box) .profile label img {
-  width: 100%;
-  aspect-ratio: 1;
-  object-fit: contain;
-  transition: 0.4s;
+.ipt + .ipt {
+  margin-top: 16px;
 }
 
 .btn {
   display: block;
-  font: 400 16px/24px "Noto Sans KR";
+  font: 400 16px/24px "Pretendard";
   color: #7D67FF;
-  background-color: rgba(125, 103, 255, 0.2);
-  padding: 13.5px 16px;
+  background-color: #E9E5FF;
+  border-radius: 8px;
+  padding: 12px 16px;
   text-align: center;
-  border-radius: 24px;
-  outline: unset;
-  border: unset;
+}
+.btn-wrap {
+  margin-top: 32px;
+  padding: 20px;
 }
 .btn.primary {
   background-color: #7D67FF;
   color: #ffffff;
 }
-.btn.sm {
-  display: inline-block;
-  font: 400 12px/18px "Noto Sans KR";
-  padding: 6.5px 16px;
-}
-.btn.text {
-  display: inline;
+.btn.box, .btn.tag {
   background-color: unset;
-  color: #7D67FF;
-  padding: unset;
-  font: inherit;
-  padding-right: 16px;
-  background: url(/resources/icons/ic-btn-text.svg) right 0 center/16px no-repeat;
-}
-
-.setting-dots {
-  position: sticky;
-  top: 0;
-  padding: 0 20px 20px;
-  z-index: 10;
-  background-color: #ffffff;
-}
-.setting-dots button {
-  display: none;
-}
-.setting-dots ul {
+  border: 1px solid #F1F1F5;
+  color: #767676;
   display: flex;
-  border-radius: 2px;
-  overflow: hidden;
-}
-.setting-dots li {
-  flex: 1;
-  height: 4px;
-  background: #7D67FF;
-}
-.setting-dots li.slick-active {
-  border-radius: 0 2px 2px 0;
-}
-.setting-dots li.slick-active ~ li {
-  background-color: #EAE9E9;
-}
-.setting-step .page-title {
-  margin-top: 12px;
-  padding-inline: 20px;
-}
-.setting-step .page-dscpt {
-  margin-top: 8px;
-  padding-inline: 20px;
-}
-.setting-step .ipt-wrap {
-  margin-top: 64px;
-}
-.setting-step .list {
-  padding-inline: 24px;
-}
-.setting-step .ipt {
-  padding-inline: 20px;
-  margin-top: 20px;
-}
-.setting-succes {
-  display: flex !important;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  text-align: center;
-  padding-top: calc(var(--vh, 1vh) * 20);
+  height: 90px;
+  transition: 0.4s;
 }
-.setting-succes .page-title {
-  font: 400 24px/34px "Noto Sans KR";
-  font-size: 22px;
-  margin-block: 24px 10px;
+.btn.box input, .btn.tag input {
+  display: none;
+}
+.btn.box span, .btn.tag span {
+  font: 400 12px/18px "Pretendard";
+}
+.btn.box:has(:checked), .btn.tag:has(:checked) {
+  border-color: #7D67FF;
+  color: #111111;
+}
+.btn.box:has(:checked) p, .btn.tag:has(:checked) p {
+  font: 700 18px/28px "Pretendard";
+}
+.btn.tag {
+  width: fit-content;
+  height: 26px;
+  font: 400 12px/18px "Pretendard";
+  padding-inline: 8px;
 }/*# sourceMappingURL=common.css.map */

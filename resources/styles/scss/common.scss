@@ -54,7 +54,13 @@ button {
 input,button,textarea{
     border: unset;
     outline: unset;
+    box-sizing: border-box;
 }
+
+$font: "Pretendard";
+
+$regular: 400;
+$bold: 700;
 
 $t1-sb: $bold           32px/42px $font;
 $t2-sb: $bold           24px/34px $font;
@@ -68,7 +74,7 @@ $ipt-label: $regular    12px/18px $font;
 $ipt-default: $regular  14px/18px $font;
 
 $btn-sm: $regular       12px/18px $font;
-$btn-label: $regular    16px/24px $font;
+$btn-default: $regular  16px/24px $font;
 
 $brand: #7D67FF;
 $brand-light: #E9E5FF;
@@ -82,3 +88,116 @@ $fg-grey: #767676;
 $fg-black: #111111;
 
 $line-light: #F1F1F5;
+
+$radius-ipt: 8px;
+$radius-btn: $radius-ipt;
+
+$delay: 0.4s;
+
+.page-title{
+    padding: 16px 20px 0;
+    h2{
+        font: $t2-sb;
+        color: $fg-black;
+    }
+    p{
+        font: $b2-rg;
+        color: $fg-grey;
+    }
+    &.type-center{
+        text-align: center;
+    }
+}
+
+.ipt{
+    &-wrap{
+        margin-top: 32px;
+        padding: 20px;
+    }
+    span{
+        font: $ipt-label;
+        color: $fg-black;
+        & + div{
+            margin-top: $radius-ipt;
+        }
+    }
+    & > div{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 6px;
+        $pd-inline: 16px;
+        input,
+        select,
+        textarea{
+            flex: 1;
+            padding: 13px $pd-inline 15px 0;
+            text-indent: $pd-inline;
+            font: $ipt-default;
+            color: $fg-black;
+            border: 1px solid $line-light;
+            border-radius: 8px;
+            appearance: none;
+            &.full{
+                flex: 100%;
+            }
+        }
+        select{
+            padding-inline: $pd-inline 48px;
+            text-indent: unset;
+            background: url(/resources/icons/ic-selectbox.svg) right 16px center/16px no-repeat;
+        }
+    }
+    & + .ipt{
+        margin-top: 16px;
+    }
+}
+
+.btn{
+    &-wrap{
+        margin-top: 32px;
+        padding: 20px;
+    }
+    display: block;
+    font: $btn-default;
+    color: $brand;
+    background-color: $brand-light;
+    border-radius: $radius-btn;
+    padding: 12px 16px;
+    text-align: center;
+    &.primary{
+        background-color: $brand;
+        color: $fg-white;
+    }
+
+    &.box,
+    &.tag{
+        background-color: unset;
+        border: 1px solid $line-light;
+        color: $fg-grey;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 90px;
+        transition: $delay;
+        input{
+            display: none;
+        }
+        span{
+            font: $ipt-label;
+        }
+        &:has(:checked){
+            border-color: $brand;
+            color: $fg-black;
+            p{
+                font: $h1-sb;
+            }
+        }
+    }
+    &.tag{
+        width: fit-content;
+        height: 26px;
+        font: $btn-sm;
+        padding-inline: 8px;
+    }
+}
