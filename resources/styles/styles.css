@@ -167,10 +167,53 @@ input, button, textarea {
   border-radius: 8px;
   appearance: none;
 }
+.ipt > div input::file-selector-button,
+.ipt > div select::file-selector-button,
+.ipt > div textarea::file-selector-button {
+  display: none;
+}
 .ipt > div input.full,
 .ipt > div select.full,
 .ipt > div textarea.full {
   flex: 100%;
+}
+.ipt > div:has(input[type=file]) {
+  gap: unset;
+}
+.ipt > div input[type=file] {
+  border-top-right-radius: unset;
+  border-bottom-right-radius: unset;
+  border-right: unset;
+}
+.ipt > div input[type=file] + label {
+  border-top-left-radius: unset;
+  border-bottom-left-radius: unset;
+}
+.ipt > div input[type=checkbox] {
+  display: none;
+}
+.ipt > div input[type=checkbox] + span {
+  position: relative;
+  font: 400 14px/18px "Pretendard";
+  color: #111111;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.ipt > div input[type=checkbox] + span::before {
+  content: "";
+  display: block;
+  font-size: 18px;
+  width: 1em;
+  aspect-ratio: 1;
+  border: 1px solid #7D67FF;
+  border-radius: 4px;
+  background: #ffffff url(/resources/icons/ic-checkbox.svg) 0 center/2em no-repeat;
+  transition: 0.4s;
+}
+.ipt > div input[type=checkbox]:checked + span::before {
+  background-color: #7D67FF;
+  background-position-x: -1em;
 }
 .ipt > div select {
   padding-inline: 16px 48px;

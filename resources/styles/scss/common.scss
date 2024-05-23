@@ -137,8 +137,61 @@ $delay: 0.4s;
             border: 1px solid $line-light;
             border-radius: 8px;
             appearance: none;
+            &::file-selector-button {
+                display: none;
+            }
             &.full{
                 flex: 100%;
+            }
+        }
+        &:has(input[type=file]){
+            gap: unset;
+        }
+        input{
+            &[type=file]{
+                border: {
+                    top-right-radius: unset;
+                    bottom-right-radius: unset;
+                    right: unset;
+                }
+                & + label{
+                    border: {
+                        top-left-radius: unset;
+                        bottom-left-radius: unset;
+                    }
+                }
+            }
+            &[type=checkbox]{
+                display: none;
+                & + span{
+                    position: relative;
+                    font: $ipt-default;
+                    color: $fg-black;
+                    display: flex;
+                    align-items: center;
+                    gap: 8px;
+                    &::before{
+                        content: "";
+                        display: block;
+                        font-size: 18px;
+                        width: 1em;
+                        aspect-ratio: 1;
+                        border: 1px solid $brand;
+                        border-radius: 4px;
+                        background: $bg-white url(/resources/icons/ic-checkbox.svg) 0 center/2em no-repeat;
+                        transition: $delay;
+                    }
+                }
+                &:checked{
+                    & + span{
+                        &::before{
+                            background: {
+                                color: $brand;
+                                position-x: -1em;
+                            }
+                        }
+                    }
+                }
             }
         }
         select{
