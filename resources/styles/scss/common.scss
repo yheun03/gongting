@@ -95,10 +95,14 @@ $radius-btn: $radius-ipt;
 $delay: 0.4s;
 
 .page-title{
+    min-height: 76px;
     padding: 16px 20px 0;
     h2{
         font: $t2-sb;
         color: $fg-black;
+        span{
+            font: $t1-sb;
+        }
     }
     p{
         font: $b2-rg;
@@ -252,5 +256,22 @@ $delay: 0.4s;
         height: 26px;
         font: $btn-sm;
         padding-inline: 8px;
+    }
+    &.text{
+        display: inline-block;
+        background-color: unset;
+        font: $btn-sm;
+    }
+    &[class*=ic-]{
+        position: relative;
+        display: inline-flex;
+        &::after{
+            content: "";
+            display: block;
+            font-size: 12px;
+            width: 1em;
+            aspect-ratio: 1;
+            background: url(/resources/icons/ic-arrow-right-btn.svg) right 0 center / 1em no-repeat;
+        }
     }
 }

@@ -37,5 +37,13 @@ footer{
                 margin-top: 8px;
             }
         }
+        &:has(span:only-child){
+            padding-block: 15px;
+            text-align: center;
+            font: $btn-sm;
+            a{
+                padding: 0 0 0 8px;
+            }
+        }
     }
 }

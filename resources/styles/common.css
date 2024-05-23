@@ -125,11 +125,15 @@ input, button, textarea {
 }
 
 .page-title {
+  min-height: 76px;
   padding: 16px 20px 0;
 }
 .page-title h2 {
   font: 700 24px/34px "Pretendard";
   color: #111111;
+}
+.page-title h2 span {
+  font: 700 32px/42px "Pretendard";
 }
 .page-title p {
   font: 400 14px/18px "Pretendard";
@@ -270,4 +274,21 @@ input, button, textarea {
   height: 26px;
   font: 400 12px/18px "Pretendard";
   padding-inline: 8px;
+}
+.btn.text {
+  display: inline-block;
+  background-color: unset;
+  font: 400 12px/18px "Pretendard";
+}
+.btn[class*=ic-] {
+  position: relative;
+  display: inline-flex;
+}
+.btn[class*=ic-]::after {
+  content: "";
+  display: block;
+  font-size: 12px;
+  width: 1em;
+  aspect-ratio: 1;
+  background: url(/resources/icons/ic-arrow-right-btn.svg) right 0 center/1em no-repeat;
 }/*# sourceMappingURL=common.css.map */
