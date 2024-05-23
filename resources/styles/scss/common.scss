@@ -55,7 +55,7 @@ button {
 
 $overlay: 10;
 $overlay-modal: 100;
-$font: 'Pretendard';
+$font: 'Noto Sans KR';
 
 /* ===========================================================
    Section: SCSS 변수 - 전경색
@@ -83,49 +83,34 @@ $label-teriary: #898989;
 
 $line: #E3E3E3;
 
-$regular: 400;
-$bold: 700;
+$medium: 400;
+$bold: 600;
 
-$t1-sb: $bold       32px/42px $font;
-$t2-sb: $bold       24px/34px $font;
-$h1-sb: $bold       18px/28px $font;
-$h2-sb: $bold       16px/24px $font;
-$b2-sb: $bold       14px/18px $font;
-$b2-rg: $regular    14px/18px $font;
-$b3-rg: $regular    12px/18px $font;
+$mb-h2-sb: $bold        24px/34px $font;
+$mb-h2-rg: $medium      24px/34px $font;
 
-$ipt-label: $regular 12px/18px $font;
-$ipt-default: $regular 14px/18px $font;
+$mb-h3-sb: $bold        20px/28px $font;
+$mb-h3-rg: $medium      20px/28px $font;
 
-$btn-sm: $regular 12px/18px $font;
-$btn-label: $regular 16px/24px $font;
+$mb-c3-sb: $bold        18px/24px $font;
 
+$mb-t1-sb: $bold        16px/24px $font;
+$mb-t1-rg: $medium      16px/24px $font;
+$btn: $medium           16px/24px $font;
 
-// $mb-h2-sb: $bold        24px/34px $font;
-// $mb-h2-rg: $medium      24px/34px $font;
+$mb-t2-sb: $bold        14px/18px $font;
+$label-title: $medium   14px/18px $font;
 
-// $mb-h3-sb: $bold        20px/28px $font;
-// $mb-h3-rg: $medium      20px/28px $font;
+$mb-b1-rg: $medium      12px/18px $font;
+$btn-sm: $medium        12px/18px $font;
+$label-body: $medium    12px/20px $font;
 
-// $mb-c3-sb: $bold        18px/24px $font;
-
-// $mb-t1-sb: $bold        16px/24px $font;
-// $mb-t1-rg: $medium      16px/24px $font;
-// $btn: $medium           16px/24px $font;
-
-// $mb-t2-sb: $bold        14px/18px $font;
-// $label-title: $medium   14px/18px $font;
-
-// $mb-b1-rg: $medium      12px/18px $font;
-// $btn-sm: $medium        12px/18px $font;
-// $label-body: $medium    12px/20px $font;
-
-// $mb-b3-rg: $medium      10px/16px $font;
+$mb-b3-rg: $medium      10px/16px $font;
 
 
 
-// $t1-sb: $bold        24px/34px $font;
-// $t1-rg: $medium      24px/34px $font;
+$t1-sb: $bold        24px/34px $font;
+$t1-rg: $medium      24px/34px $font;
 
 
 
