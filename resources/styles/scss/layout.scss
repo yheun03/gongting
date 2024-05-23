@@ -2,8 +2,6 @@
 @import 'common.scss';
 
 $width-device: 420px;
-$height-header: 48px;
-$height-footer: 54px;
 
 .wrap{
     max-width: $width-device;
@@ -14,100 +12,12 @@ $height-footer: 54px;
     display: flex;
     flex-direction: column;
 }
-
 header{
-    padding: 44px 10px 0;
-    background-color: $bg-white;
-    color: $fg-black;
-    z-index: $overlay;
-    &,
-    ul{
-        display: flex;
-        align-items: center;
-        & ~ ul{
-            margin-left: auto;
-        }
-    }
-    img{
-        width: 44px;
-        aspect-ratio: 1;
-        object-fit: cover;
-    }
-    h1{
-        font: $mb-t1-sb;
-        flex: 1;
-        text-align: center;
-    }
-    span,
-    a,
-    p{
-        font: $mb-t1-rg;
-        color: $fg-black;
-        display: block;
-        min-width: 44px;
-    }
+
 }
 section{
     flex: 1;
-    overflow-x: hidden;
 }
 footer{
-    background-color: $bg-white;
-    z-index: $overlay;
-    ul{
-        display: flex;
-        padding: 12px 20px 40px;
-        li{
-            flex: 1;
-            &:only-child{
-                .btn{
-                    width: 100%;
-                }
-            }
-            &:first-child{
-                .btn{
-                    border: {
-                        top-left-radius: 24px;
-                        bottom-left-radius: 24px;
-                    }
-                }
-            }
-            &:last-child{
-                .btn{
-                    border: {
-                        top-right-radius: 24px;
-                        bottom-right-radius: 24px;
-                    }
-                }
-            }
-        }
-        &.vertical{
-            flex-direction: column;
-            gap: 10px;
-            .btn{
-                border-radius: 24px;
-            }
-        }
-        &.btn-wrap{
-            padding: 8px 10px 40px;
-            li:not(.active){
-                filter: invert(53%) sepia(50%) saturate(21%) hue-rotate(215deg) brightness(92%) contrast(99%);
-            }
-            img{
-                width: 24px;
-                aspect-ratio: 1;
-                object-fit: contain;
-                margin: auto;
-            }
-            span{
-                color: $label-primary;
-                display: block;
-                text-align: center;
-                font: $mb-b3-rg;
-            }
-        }
-    }   
-    .btn{
-        border-radius: unset;
-    }
+    
 }
