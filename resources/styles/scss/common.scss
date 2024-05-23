@@ -1,0 +1,84 @@
+@charset 'utf-8';
+@import 'font.scss';
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	vertical-align: baseline;
+    box-sizing: border-box;
+    text-decoration: none;
+	word-break: keep-all;
+    letter-spacing: -0.025em;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+img{
+    display: block;
+}
+a,
+button {
+    cursor: pointer;
+    outline: unset;
+}
+input,button,textarea{
+    border: unset;
+    outline: unset;
+}
+
+$t1-sb: $bold           32px/42px $font;
+$t2-sb: $bold           24px/34px $font;
+$h1-sb: $bold           18px/28px $font;
+$h2-sb: $bold           16px/24px $font;
+$b2-sb: $bold           14px/18px $font;
+$b2-rg: $regular        14px/18px $font;
+$b3-rg: $regular        12px/18px $font;
+
+$ipt-label: $regular    12px/18px $font;
+$ipt-default: $regular  14px/18px $font;
+
+$btn-sm: $regular       12px/18px $font;
+$btn-label: $regular    16px/24px $font;
+
+$brand: #7D67FF;
+$brand-light: #E9E5FF;
+
+$bg-white: #ffffff;
+$bg-regular: #F1F1F5;
+$bg-light: #F7F7FB;
+
+$fg-white: #ffffff;
+$fg-grey: #767676;
+$fg-black: #111111;
+
+$line-light: #F1F1F5;
