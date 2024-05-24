@@ -162,7 +162,8 @@ input, button, textarea {
 }
 .ipt > div input,
 .ipt > div select,
-.ipt > div textarea {
+.ipt > div textarea,
+.ipt > div .preview {
   flex: 1;
   padding: 13px 16px 15px 0;
   text-indent: 16px;
@@ -174,16 +175,25 @@ input, button, textarea {
 }
 .ipt > div input::file-selector-button,
 .ipt > div select::file-selector-button,
-.ipt > div textarea::file-selector-button {
+.ipt > div textarea::file-selector-button,
+.ipt > div .preview::file-selector-button {
   display: none;
 }
 .ipt > div input.full,
 .ipt > div select.full,
-.ipt > div textarea.full {
+.ipt > div textarea.full,
+.ipt > div .preview.full {
   flex: 100%;
 }
 .ipt > div:has(input[type=file]) {
   gap: unset;
+}
+.ipt > div:has(input[type=file]) .preview {
+  order: -1;
+  flex: 100%;
+  margin-bottom: 20px;
+  height: 180px;
+  background: url(/resources/icons/ic-photo.svg) center/48px no-repeat;
 }
 .ipt > div input[type=file] {
   border-top-right-radius: unset;
@@ -420,4 +430,25 @@ footer .btn-wrap:has(span:only-child) a {
   gap: 18px;
   justify-content: center;
   flex-wrap: wrap;
+}
+
+.notice {
+  font: 400 12px/18px "Pretendard";
+  color: #767676;
+  padding-inline: 20px;
+}
+.notice li {
+  position: relative;
+  padding-left: 18px;
+}
+.notice li::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 8px;
+  transform: translateY(-50%);
+  width: 3px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background-color: #767676;
 }/*# sourceMappingURL=styles.css.map */

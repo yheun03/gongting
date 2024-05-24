@@ -60,3 +60,24 @@
 .setting{
 
 }
+.notice{
+    font: $b3-rg;
+    color: $fg-grey;
+    padding-inline: $padding-global;
+    li{
+        position: relative;
+        padding-left: 18px;
+        &::before{
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 8px;
+            transform: translateY(-50%);
+            width: 3px;
+            aspect-ratio: 1;
+            border-radius: 50%;
+            background-color: $fg-grey;
+
+        }
+    }
+}

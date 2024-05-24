@@ -137,7 +137,8 @@ $padding-global: 20px;
         $pd-inline: 16px;
         input,
         select,
-        textarea{
+        textarea,
+        .preview{
             flex: 1;
             padding: 13px $pd-inline 15px 0;
             text-indent: $pd-inline;
@@ -155,6 +156,13 @@ $padding-global: 20px;
         }
         &:has(input[type=file]){
             gap: unset;
+            .preview{
+                order: -1;
+                flex: 100%;
+                margin-bottom: 20px;
+                height: 180px;
+                background: url(/resources/icons/ic-photo.svg) center/48px no-repeat;
+            }
         }
         input{
             &[type=file]{
