@@ -132,9 +132,13 @@ input, button, textarea {
   font: 700 24px/34px "Pretendard";
   color: #111111;
 }
+.page-title h2 span {
+  font: 700 32px/42px "Pretendard";
+}
 .page-title p {
   font: 400 14px/18px "Pretendard";
   color: #767676;
+  margin-top: 8px;
 }
 .page-title.type-center {
   text-align: center;
@@ -142,7 +146,7 @@ input, button, textarea {
 
 .ipt-wrap {
   margin-top: 32px;
-  padding: 20px;
+  padding: 20px 20px;
 }
 .ipt span {
   font: 400 12px/18px "Pretendard";
@@ -210,7 +214,7 @@ input, button, textarea {
   border: 1px solid #7D67FF;
   border-radius: 4px;
   background: #ffffff url(/resources/icons/ic-checkbox.svg) 0 center/2em no-repeat;
-  transition: 0.4s;
+  transition: 0.2s;
 }
 .ipt > div input[type=checkbox]:checked + span::before {
   background-color: #7D67FF;
@@ -220,6 +224,13 @@ input, button, textarea {
   padding-inline: 16px 48px;
   text-indent: unset;
   background: url(/resources/icons/ic-selectbox.svg) right 16px center/16px no-repeat;
+}
+.ipt > div select:not(:only-child) {
+  flex: 0;
+  width: fit-content;
+}
+.ipt > div select:not(:only-child) + * {
+  width: 100%;
 }
 .ipt + .ipt {
   margin-top: 16px;
@@ -236,7 +247,31 @@ input, button, textarea {
 }
 .btn-wrap {
   margin-top: 32px;
-  padding: 20px;
+  padding: 20px 20px;
+}
+.btn-wrap.set-profile {
+  gap: 20px 40px;
+}
+.btn-wrap.set-profile .btn {
+  padding: unset;
+  overflow: hidden;
+  width: 124px;
+  aspect-ratio: 1;
+  height: auto;
+  border-radius: 50%;
+}
+.btn-wrap.set-profile img {
+  width: 100%;
+  aspect-ratio: 1;
+  filter: grayscale(0.8);
+  transition: 0.2s;
+}
+.btn-wrap.set-profile input:checked + img {
+  filter: unset;
+  transform: scale(1.05);
+}
+.btn-wrap:has(.box) .btn {
+  flex: calc(50% - 18px);
 }
 .btn.primary {
   background-color: #7D67FF;
@@ -251,7 +286,7 @@ input, button, textarea {
   justify-content: center;
   align-items: center;
   height: 90px;
-  transition: 0.4s;
+  transition: 0.2s;
 }
 .btn.box input, .btn.tag input {
   display: none;
@@ -266,6 +301,9 @@ input, button, textarea {
 .btn.box:has(:checked) p, .btn.tag:has(:checked) p {
   font: 700 18px/28px "Pretendard";
 }
+.btn.box {
+  width: 160px;
+}
 .btn.tag {
   width: fit-content;
   height: 26px;
@@ -276,6 +314,18 @@ input, button, textarea {
   display: inline-block;
   background-color: unset;
   font: 400 12px/18px "Pretendard";
+}
+.btn[class*=ic-] {
+  position: relative;
+  display: inline-flex;
+}
+.btn[class*=ic-]::after {
+  content: "";
+  display: block;
+  font-size: 12px;
+  width: 1em;
+  aspect-ratio: 1;
+  background: url(/resources/icons/ic-arrow-right-btn.svg) right 0 center/1em no-repeat;
 }
 
 .wrap {

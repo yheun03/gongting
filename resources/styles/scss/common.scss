@@ -91,12 +91,16 @@ $line-light: #F1F1F5;
 
 $radius-ipt: 8px;
 $radius-btn: $radius-ipt;
+$radius-slickdots: 4px;
 
-$delay: 0.4s;
+$delay: 0.2s;
+
+$btn-gap: 18px;
+$padding-global: 20px;
 
 .page-title{
     min-height: 76px;
-    padding: 16px 20px 0;
+    padding: 16px $padding-global 0;
     h2{
         font: $t2-sb;
         color: $fg-black;
@@ -107,6 +111,7 @@ $delay: 0.4s;
     p{
         font: $b2-rg;
         color: $fg-grey;
+        margin-top: 8px;
     }
     &.type-center{
         text-align: center;
@@ -116,7 +121,7 @@ $delay: 0.4s;
 .ipt{
     &-wrap{
         margin-top: 32px;
-        padding: 20px;
+        padding: 20px $padding-global;
     }
     span{
         font: $ipt-label;
@@ -199,6 +204,13 @@ $delay: 0.4s;
             }
         }
         select{
+            &:not(:only-child){
+                flex: 0;
+                width: fit-content;
+                & + *{
+                    width: 100%;
+                }
+            }
             padding-inline: $pd-inline 48px;
             text-indent: unset;
             background: url(/resources/icons/ic-selectbox.svg) right 16px center/16px no-repeat;
@@ -212,7 +224,42 @@ $delay: 0.4s;
 .btn{
     &-wrap{
         margin-top: 32px;
-        padding: 20px;
+        padding: 20px $padding-global;
+        &.set-profile{
+            gap: 20px 40px;
+            .btn{
+                padding: unset;
+                overflow: hidden;
+                width: 124px;
+                aspect-ratio: 1;
+                height: auto;
+                border-radius: 50%;
+            }
+            img{
+                width: 100%;
+                aspect-ratio: 1;
+                filter: grayscale(.8);
+                transition: $delay;
+            }
+            input:checked{
+                & + img{
+                    filter: unset;
+                    transform: scale(1.05);
+                }
+            }
+        }
+        &:has(.box){
+            .btn{
+                flex: calc(50% - $btn-gap);
+            }
+        }
+        &:has(.tag){
+            padding-inline: $padding-global !important;
+            gap: 6px 10px !important;
+            .btn{
+                // flex: calc(50% - $btn-gap);
+            }
+        }
     }
     display: block;
     font: $btn-default;
@@ -250,6 +297,9 @@ $delay: 0.4s;
                 font: $h1-sb;
             }
         }
+    }
+    &.box{
+        width: 160px;
     }
     &.tag{
         width: fit-content;

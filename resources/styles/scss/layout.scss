@@ -16,7 +16,7 @@ $overlay-modal: 100;
 }
 header{
     flex: 0;
-    padding: 46px 20px 14px;
+    padding: 46px $padding-global 14px;
     background-color: $bg-white;
     z-index: $overlay;
 }
@@ -26,7 +26,7 @@ section{
 }
 footer{
     flex: 0;
-    padding: 16px 20px 32px;
+    padding: 16px $padding-global 32px;
     background-color: $bg-white;
     z-index: $overlay;
     .btn-wrap{
