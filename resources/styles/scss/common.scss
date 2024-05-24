@@ -303,10 +303,7 @@ $padding-global: 20px;
             border-color: $brand;
             color: $fg-black;
             span{
-                font: $h1-sb;
-                &:last-child{
-                    font: $ipt-label
-                }
+                font: $ipt-label;
             }
         }
     }

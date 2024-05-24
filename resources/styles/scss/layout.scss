@@ -29,6 +29,14 @@ footer{
     padding: 16px $padding-global 32px;
     background-color: $bg-white;
     z-index: $overlay;
+    section:has(.slick-slider) + & .btn{
+        flex: 1;
+        margin: unset !important;
+        &-wrap{
+            display: flex;
+            gap: 8px;
+        }
+    }
     .btn-wrap{
         margin: unset;
         padding: unset;
