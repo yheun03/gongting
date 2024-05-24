@@ -305,18 +305,24 @@ input, button, textarea {
 .btn.box input, .btn.tag input {
   display: none;
 }
-.btn.box span, .btn.tag span {
-  font: 400 12px/18px "Pretendard";
-}
 .btn.box:has(:checked), .btn.tag:has(:checked) {
   border-color: #7D67FF;
   color: #111111;
 }
-.btn.box:has(:checked) span, .btn.tag:has(:checked) span {
-  font: 400 12px/18px "Pretendard";
-}
 .btn.box {
   width: 160px;
+}
+.btn.box span {
+  font: 400 16px/24px "Pretendard";
+}
+.btn.box span + span {
+  font: 400 12px/18px "Pretendard";
+}
+.btn.box:has(:checked) span {
+  font: 700 18px/28px "Pretendard";
+}
+.btn.box:has(:checked) span + span {
+  font: 400 12px/18px "Pretendard";
 }
 .btn.tag {
   width: fit-content;

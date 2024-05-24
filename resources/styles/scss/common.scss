@@ -296,19 +296,27 @@ $padding-global: 20px;
         input{
             display: none;
         }
-        span{
-            font: $ipt-label;
-        }
         &:has(:checked){
             border-color: $brand;
             color: $fg-black;
-            span{
-                font: $ipt-label;
-            }
         }
     }
     &.box{
         width: 160px;
+        span{
+            font: $btn-default;
+            & + span{
+                font: $ipt-label;
+            }
+        }
+        &:has(:checked){
+            span{
+                font: $h1-sb;
+                & + span{
+                    font: $ipt-label;
+                }
+            }
+        }
     }
     &.tag{
         width: fit-content;
