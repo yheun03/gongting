@@ -328,6 +328,7 @@ input, button, textarea {
   display: inline-block;
   background-color: unset;
   font: 400 12px/18px "Pretendard";
+  width: fit-content;
 }
 .btn[class*=ic-] {
   position: relative;
@@ -340,6 +341,12 @@ input, button, textarea {
   width: 1em;
   aspect-ratio: 1;
   background: url(/resources/icons/ic-arrow-right-btn.svg) right 0 center/1em no-repeat;
+}
+.btn.sm {
+  font: 400 12px/18px "Pretendard";
+  padding: 3px 8px;
+  width: fit-content;
+  border-radius: 4px;
 }
 
 .notice {
@@ -378,8 +385,8 @@ input, button, textarea {
 }
 .list .dept1 > li > div {
   display: grid;
-  grid-template-columns: 66px 1fr;
-  grid-template-rows: 44px 22px 1fr;
+  grid-template-columns: 60px 1fr;
+  grid-template-rows: 38px 22px 1fr;
   column-gap: 16px;
   padding: 16px 60px 16px 20px;
 }
@@ -416,11 +423,34 @@ input, button, textarea {
 .list .dept2 {
   height: 0;
   overflow: hidden;
-  padding-inline: 20px;
   border-bottom: 1px solid #F1F1F5;
   transition: 0.2s;
 }
 
+.wrap-user {
+  padding-inline: 20px;
+  display: flex;
+  align-items: center;
+  padding-block: 20px 16px;
+  background-color: #ffffff;
+}
+.wrap-user .user-name {
+  margin-left: 16px;
+  font: 700 16px/24px "Pretendard";
+  color: #111111;
+}
+.wrap-user .btn {
+  margin-left: auto;
+}
+.wrap-user img {
+  width: 60px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+}
+.wrap-user-infor {
+  background-color: #ffffff;
+  padding-inline: 20px;
+}
 .wrap-user-infor h3 {
   font: 700 14px/18px "Pretendard";
   color: #7D67FF;
@@ -441,6 +471,7 @@ input, button, textarea {
   font: 400 12px/18px "Pretendard";
   color: #111111;
   padding-block: 8px;
+  text-align: left;
 }
 .wrap-user-infor table tr > * * {
   font: inherit;

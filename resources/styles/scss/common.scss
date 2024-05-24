@@ -320,6 +320,7 @@ $padding-global: 20px;
         display: inline-block;
         background-color: unset;
         font: $btn-sm;
+        width: fit-content;
     }
     &[class*=ic-]{
         position: relative;
@@ -332,6 +333,12 @@ $padding-global: 20px;
             aspect-ratio: 1;
             background: url(/resources/icons/ic-arrow-right-btn.svg) right 0 center / 1em no-repeat;
         }
+    }
+    &.sm{
+        font: $btn-sm;
+        padding: 3px 8px;
+        width: fit-content;
+        border-radius: 4px;
     }
 }
 .notice{
@@ -372,8 +379,8 @@ $padding-global: 20px;
                 }
                 & > div{
                     display: grid;
-                    grid-template-columns: 66px 1fr;
-                    grid-template-rows: 44px 22px 1fr;
+                    grid-template-columns: 60px 1fr;
+                    grid-template-rows: 38px 22px 1fr;
                     column-gap: 16px;
                     padding: 16px 60px 16px $padding-global;
                     span{
@@ -416,45 +423,67 @@ $padding-global: 20px;
         &2{
             height: 0;
             overflow: hidden;
-            padding-inline: $padding-global;
             border-bottom: 1px solid $line-light;
             transition: $delay;
         }
     }
 }
 
-.wrap-user-infor{
-    h3{
-        font: $b2-sb;
-        color: $brand;
-        & ~ h3{
-            margin-top: 16px;
-        }
-        &:not(:first-child) ~ div{
-            margin-top: 8px;
-        }
+.wrap-user{
+    padding-inline: $padding-global;
+    display: flex;
+    align-items: center;
+    padding-block: 20px 16px;
+    background-color: $bg-white;
+    .user-name{
+        margin-left: 16px;
+        font: $h2-sb;
+        color: $fg-black;
     }
-    .btn-wrap{
-        display: flex;
-        flex-wrap: wrap;
-        padding: unset !important;
-        margin: unset;
+    .btn{
+        margin-left: auto;
     }
-    table{
-        tr > *{
-            font: $b3-rg;
-            color: $fg-black;
-            padding-block: 8px;
-            *{
-                font: inherit;
-                color: inherit;
+    img{
+        width: 60px;
+        aspect-ratio: 1;
+        border-radius: 50%;
+    }
+    &-infor{
+        background-color: $bg-white;
+        padding-inline: $padding-global;
+        h3{
+            font: $b2-sb;
+            color: $brand;
+            & ~ h3{
+                margin-top: 16px;
+            }
+            &:not(:first-child) ~ div{
+                margin-top: 8px;
             }
         }
-        th{
-            width: 100px;
+        .btn-wrap{
+            display: flex;
+            flex-wrap: wrap;
+            padding: unset !important;
+            margin: unset;
         }
-        td{
-            color: $fg-grey;
+        table{
+            tr > *{
+                font: $b3-rg;
+                color: $fg-black;
+                padding-block: 8px;
+                text-align: left;
+                *{
+                    font: inherit;
+                    color: inherit;
+                }
+            }
+            th{
+                width: 100px;
+            }
+            td{
+                color: $fg-grey;
+            }
         }
     }
 }
