@@ -420,34 +420,35 @@ input, button, textarea {
   border-bottom: 1px solid #F1F1F5;
   transition: 0.2s;
 }
-.list .dept2 h3 {
+
+.wrap-user-infor h3 {
   font: 700 14px/18px "Pretendard";
   color: #7D67FF;
 }
-.list .dept2 h3 ~ h3 {
+.wrap-user-infor h3 ~ h3 {
   margin-top: 16px;
 }
-.list .dept2 h3:not(:first-child) ~ div {
+.wrap-user-infor h3:not(:first-child) ~ div {
   margin-top: 8px;
 }
-.list .dept2 .btn-wrap {
+.wrap-user-infor .btn-wrap {
   display: flex;
   flex-wrap: wrap;
   padding: unset !important;
   margin: unset;
 }
-.list .dept2 table tr > * {
+.wrap-user-infor table tr > * {
   font: 400 12px/18px "Pretendard";
   color: #111111;
   padding-block: 8px;
 }
-.list .dept2 table tr > * * {
+.wrap-user-infor table tr > * * {
   font: inherit;
   color: inherit;
 }
-.list .dept2 table th {
+.wrap-user-infor table th {
   width: 100px;
 }
-.list .dept2 table td {
+.wrap-user-infor table td {
   color: #767676;
 }/*# sourceMappingURL=common.css.map */
