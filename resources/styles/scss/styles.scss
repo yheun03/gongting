@@ -128,3 +128,8 @@
         color: inherit;
     }
 }
+.mode{
+    &-eng{
+        ime-mode: inactive;
+    }
+}

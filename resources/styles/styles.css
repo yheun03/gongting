@@ -312,8 +312,11 @@ input, button, textarea {
   border-color: #7D67FF;
   color: #111111;
 }
-.btn.box:has(:checked) p, .btn.tag:has(:checked) p {
+.btn.box:has(:checked) span, .btn.tag:has(:checked) span {
   font: 700 18px/28px "Pretendard";
+}
+.btn.box:has(:checked) span:last-child, .btn.tag:has(:checked) span:last-child {
+  font: 400 12px/18px "Pretendard";
 }
 .btn.box {
   width: 160px;
@@ -661,4 +664,8 @@ footer .bnb ul li.active {
 }
 .menu a {
   color: inherit;
+}
+
+.mode-eng {
+  ime-mode: inactive;
 }/*# sourceMappingURL=styles.css.map */

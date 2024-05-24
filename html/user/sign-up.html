@@ -48,27 +48,27 @@
             <div class="ipt-wrap">
                 <div class="ipt">
                     <span>이름</span>
-                    <div><input type="text" placeholder="이름을 입력하세요"></div>
+                    <div><input type="text" id="user-name" name="user-name" placeholder="이름을 입력하세요"></div>
                 </div>
                 <div class="ipt">
                     <span>이메일</span>
-                    <div><input type="emali" placeholder="이메일을 입력하세요" inputmode="email"></div>
+                    <div><input type="email" id="user-email" name="user-email" placeholder="이메일을 입력하세요" inputmode="email"></div>
                 </div>
                 <div class="ipt">
                     <span>학번</span>
-                    <div><input type="number" placeholder="학번을 입력하세요" inputmode="numeric"></div>
+                    <div><input type="number" id="user-key" name="user-key" placeholder="학번을 입력하세요" inputmode="numeric"></div>
                 </div>
                 <div class="ipt">
                     <span>비밀번호</span>
                     <div>
-                        <input type="number" placeholder="비밀번호를 입력하세요" inputmode="full-width-latin">
-                        <input type="number" placeholder="비밀번호를 입력하세요" inputmode="full-width-latin">
+                        <input type="password" id="user-password" name="user-password" placeholder="비밀번호를 입력하세요">
+                        <input type="password" id="user-password-check" name="user-password-check" placeholder="비밀번호를 입력하세요">
                     </div>
                 </div>
                 <div class="ipt">
                     <div>
                         <label>
-                            <input type="checkbox" name="" id="">
+                            <input type="checkbox" name="law1" id="law1">
                             <span>[필수] 서비스 이용약관에 동의</span>
                         </label>
                     </div>
@@ -76,7 +76,7 @@
                 <div class="ipt">
                     <div>
                         <label>
-                            <input type="checkbox" name="" id="">
+                            <input type="checkbox" name="law2" id="law2">
                             <span>[필수] 개인정보 처리방침에 동의</span>
                         </label>
                     </div>
@@ -85,7 +85,7 @@
         </section>
         <footer>
             <div class="btn-wrap">
-                <a href="" class="btn primary">회원가입</a>
+                <a href="/html/user/sign-up-succes.html" class="btn primary">회원가입</a>
             </div>
         </footer>
     </div>

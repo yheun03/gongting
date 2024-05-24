@@ -302,8 +302,11 @@ $padding-global: 20px;
         &:has(:checked){
             border-color: $brand;
             color: $fg-black;
-            p{
+            span{
                 font: $h1-sb;
+                &:last-child{
+                    font: $ipt-label
+                }
             }
         }
     }
