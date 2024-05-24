@@ -24,4 +24,9 @@ $(document).ready(function(){
         draggable: false,       // 마우스 드래그 비활성화
         adaptiveHeight: true // 아이템 별로 높이를 자동으로 조정
     });
+
+    $(".list").on("click", ".dept1 > li", function() {
+        const classNm = "open";
+        $(this).toggleClass(classNm).siblings().removeClass(classNm);
+    })
 })
