@@ -46,4 +46,27 @@ footer{
             }
         }
     }
+    .bnb{
+        ul{
+            display: flex;
+            li{
+                flex: 1;
+                filter: invert(49%) sepia(0%) saturate(0%) hue-rotate(226deg) brightness(93%) contrast(84%);
+                a{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    font: $b4-rg;
+                    color: $fg-black;
+                }
+                img{
+                    width: 24px;
+                    aspect-ratio: 1;
+                }
+                &.active{
+                    filter: unset;
+                }
+            }
+        }
+    }
 }

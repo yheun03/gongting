@@ -162,7 +162,8 @@ input, button, textarea {
 }
 .ipt > div input,
 .ipt > div select,
-.ipt > div textarea {
+.ipt > div textarea,
+.ipt > div .preview {
   flex: 1;
   padding: 13px 16px 15px 0;
   text-indent: 16px;
@@ -174,16 +175,25 @@ input, button, textarea {
 }
 .ipt > div input::file-selector-button,
 .ipt > div select::file-selector-button,
-.ipt > div textarea::file-selector-button {
+.ipt > div textarea::file-selector-button,
+.ipt > div .preview::file-selector-button {
   display: none;
 }
 .ipt > div input.full,
 .ipt > div select.full,
-.ipt > div textarea.full {
+.ipt > div textarea.full,
+.ipt > div .preview.full {
   flex: 100%;
 }
 .ipt > div:has(input[type=file]) {
   gap: unset;
+}
+.ipt > div:has(input[type=file]) .preview {
+  order: -1;
+  flex: 100%;
+  margin-bottom: 20px;
+  height: 180px;
+  background: url(/resources/icons/ic-photo.svg) center/48px no-repeat;
 }
 .ipt > div input[type=file] {
   border-top-right-radius: unset;
@@ -223,7 +233,7 @@ input, button, textarea {
 .ipt > div select {
   padding-inline: 16px 48px;
   text-indent: unset;
-  background: url(/resources/icons/ic-selectbox.svg) right 16px center/16px no-repeat;
+  background: url(/resources/icons/ic-arrow-bottom.svg) right 16px center/16px no-repeat;
 }
 .ipt > div select:not(:only-child) {
   flex: 0;
@@ -272,6 +282,10 @@ input, button, textarea {
 }
 .btn-wrap:has(.box) .btn {
   flex: calc(50% - 18px);
+}
+.btn-wrap:has(.tag) {
+  padding-inline: 20px !important;
+  gap: 6px 10px !important;
 }
 .btn.primary {
   background-color: #7D67FF;
@@ -328,6 +342,116 @@ input, button, textarea {
   background: url(/resources/icons/ic-arrow-right-btn.svg) right 0 center/1em no-repeat;
 }
 
+.notice {
+  font: 400 12px/18px "Pretendard";
+  color: #767676;
+  padding-inline: 20px;
+}
+.notice li {
+  position: relative;
+  padding-left: 18px;
+}
+.notice li::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 8px;
+  transform: translateY(-50%);
+  width: 3px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background-color: #767676;
+}
+
+.list .dept1 > li {
+  position: relative;
+}
+.list .dept1 > li::after {
+  content: "";
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 20px;
+  aspect-ratio: 1;
+  background: url(/resources/icons/ic-arrow-bottom.svg) center/20px no-repeat;
+  transition: 0.2s;
+}
+.list .dept1 > li > div {
+  display: grid;
+  grid-template-columns: 66px 1fr;
+  grid-template-rows: 44px 22px 1fr;
+  column-gap: 16px;
+  padding: 16px 60px 16px 20px;
+}
+.list .dept1 > li > div span {
+  font: 400 12px/18px "Pretendard";
+  color: #767676;
+}
+.list .dept1 > li > div p {
+  align-self: end;
+}
+.list .dept1 > li > div .user-name {
+  font: 700 16px/24px "Pretendard";
+  color: #111111;
+}
+.list .dept1 > li > div .user-profile {
+  width: 100%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  grid-row: span 2;
+}
+.list .dept1 > li > div .user-intro {
+  font: 400 14px/18px "Pretendard";
+  color: #111111;
+  grid-column: span 2;
+  margin-top: 16px;
+}
+.list .dept1 > li.open::after {
+  transform: rotate(180deg);
+}
+.list .dept1 > li.open .dept2 {
+  height: auto;
+  padding-block: 8px 32px;
+}
+.list .dept2 {
+  height: 0;
+  overflow: hidden;
+  padding-inline: 20px;
+  border-bottom: 1px solid #F1F1F5;
+  transition: 0.2s;
+}
+.list .dept2 h3 {
+  font: 700 14px/18px "Pretendard";
+  color: #7D67FF;
+}
+.list .dept2 h3 ~ h3 {
+  margin-top: 16px;
+}
+.list .dept2 h3:not(:first-child) ~ div {
+  margin-top: 8px;
+}
+.list .dept2 .btn-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  padding: unset !important;
+  margin: unset;
+}
+.list .dept2 table tr > * {
+  font: 400 12px/18px "Pretendard";
+  color: #111111;
+  padding-block: 8px;
+}
+.list .dept2 table tr > * * {
+  font: inherit;
+  color: inherit;
+}
+.list .dept2 table th {
+  width: 100px;
+}
+.list .dept2 table td {
+  color: #767676;
+}
+
 .wrap {
   max-width: 420px;
   width: 100%;
@@ -370,4 +494,25 @@ footer .btn-wrap:has(span:only-child) {
 }
 footer .btn-wrap:has(span:only-child) a {
   padding: 0 0 0 8px;
+}
+footer .bnb ul {
+  display: flex;
+}
+footer .bnb ul li {
+  flex: 1;
+  filter: invert(49%) sepia(0%) saturate(0%) hue-rotate(226deg) brightness(93%) contrast(84%);
+}
+footer .bnb ul li a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font: 400 10px/16px "Pretendard";
+  color: #111111;
+}
+footer .bnb ul li img {
+  width: 24px;
+  aspect-ratio: 1;
+}
+footer .bnb ul li.active {
+  filter: unset;
 }/*# sourceMappingURL=layout.css.map */

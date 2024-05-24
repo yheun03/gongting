@@ -340,4 +340,114 @@ input, button, textarea {
   width: 1em;
   aspect-ratio: 1;
   background: url(/resources/icons/ic-arrow-right-btn.svg) right 0 center/1em no-repeat;
+}
+
+.notice {
+  font: 400 12px/18px "Pretendard";
+  color: #767676;
+  padding-inline: 20px;
+}
+.notice li {
+  position: relative;
+  padding-left: 18px;
+}
+.notice li::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 8px;
+  transform: translateY(-50%);
+  width: 3px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background-color: #767676;
+}
+
+.list .dept1 > li {
+  position: relative;
+}
+.list .dept1 > li::after {
+  content: "";
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 20px;
+  aspect-ratio: 1;
+  background: url(/resources/icons/ic-arrow-bottom.svg) center/20px no-repeat;
+  transition: 0.2s;
+}
+.list .dept1 > li > div {
+  display: grid;
+  grid-template-columns: 66px 1fr;
+  grid-template-rows: 44px 22px 1fr;
+  column-gap: 16px;
+  padding: 16px 60px 16px 20px;
+}
+.list .dept1 > li > div span {
+  font: 400 12px/18px "Pretendard";
+  color: #767676;
+}
+.list .dept1 > li > div p {
+  align-self: end;
+}
+.list .dept1 > li > div .user-name {
+  font: 700 16px/24px "Pretendard";
+  color: #111111;
+}
+.list .dept1 > li > div .user-profile {
+  width: 100%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  grid-row: span 2;
+}
+.list .dept1 > li > div .user-intro {
+  font: 400 14px/18px "Pretendard";
+  color: #111111;
+  grid-column: span 2;
+  margin-top: 16px;
+}
+.list .dept1 > li.open::after {
+  transform: rotate(180deg);
+}
+.list .dept1 > li.open .dept2 {
+  height: auto;
+  padding-block: 8px 32px;
+}
+.list .dept2 {
+  height: 0;
+  overflow: hidden;
+  padding-inline: 20px;
+  border-bottom: 1px solid #F1F1F5;
+  transition: 0.2s;
+}
+.list .dept2 h3 {
+  font: 700 14px/18px "Pretendard";
+  color: #7D67FF;
+}
+.list .dept2 h3 ~ h3 {
+  margin-top: 16px;
+}
+.list .dept2 h3:not(:first-child) ~ div {
+  margin-top: 8px;
+}
+.list .dept2 .btn-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  padding: unset !important;
+  margin: unset;
+}
+.list .dept2 table tr > * {
+  font: 400 12px/18px "Pretendard";
+  color: #111111;
+  padding-block: 8px;
+}
+.list .dept2 table tr > * * {
+  font: inherit;
+  color: inherit;
+}
+.list .dept2 table th {
+  width: 100px;
+}
+.list .dept2 table td {
+  color: #767676;
 }/*# sourceMappingURL=common.css.map */

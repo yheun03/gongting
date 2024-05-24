@@ -69,6 +69,7 @@ $h2-sb: $bold           16px/24px $font;
 $b2-sb: $bold           14px/18px $font;
 $b2-rg: $regular        14px/18px $font;
 $b3-rg: $regular        12px/18px $font;
+$b4-rg: $regular        10px/16px $font;
 
 $ipt-label: $regular    12px/18px $font;
 $ipt-default: $regular  14px/18px $font;
@@ -330,6 +331,127 @@ $padding-global: 20px;
             width: 1em;
             aspect-ratio: 1;
             background: url(/resources/icons/ic-arrow-right-btn.svg) right 0 center / 1em no-repeat;
+        }
+    }
+}
+.notice{
+    font: $b3-rg;
+    color: $fg-grey;
+    padding-inline: $padding-global;
+    li{
+        position: relative;
+        padding-left: 18px;
+        &::before{
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 8px;
+            transform: translateY(-50%);
+            width: 3px;
+            aspect-ratio: 1;
+            border-radius: 50%;
+            background-color: $fg-grey;
+
+        }
+    }
+}
+.list{
+    .dept{
+        &1{
+            & > li{
+                position: relative;
+                &::after{
+                    content: "";
+                    position: absolute;
+                    top: $padding-global;
+                    right: $padding-global;
+                    width: 20px;
+                    aspect-ratio: 1;
+                    background: url(/resources/icons/ic-arrow-bottom.svg) center/20px no-repeat;
+                    transition: $delay;
+                }
+                & > div{
+                    display: grid;
+                    grid-template-columns: 66px 1fr;
+                    grid-template-rows: 44px 22px 1fr;
+                    column-gap: 16px;
+                    padding: 16px 60px 16px $padding-global;
+                    span{
+                        font: $b3-rg;
+                        color: $fg-grey;
+                    }
+                    p{
+                        align-self: end;
+                    }
+                    .user{
+                        &-name{
+                            font: $h2-sb;
+                            color: $fg-black;
+                        }
+                        &-profile{
+                            width: 100%;
+                            aspect-ratio: 1;
+                            border-radius: 50%;
+                            grid-row: span 2;
+                        }
+                        &-intro{
+                            font: $b2-rg;
+                            color: $fg-black;
+                            grid-column: span 2;
+                            margin-top: 16px;
+                        }
+                    }
+                }
+                &.open{
+                    &::after{
+                        transform: rotate(180deg);
+                    }
+                    .dept2{
+                        height: auto;
+                        padding-block: 8px 32px;
+                    }
+                }
+            }
+        }
+        &2{
+            height: 0;
+            overflow: hidden;
+            padding-inline: $padding-global;
+            border-bottom: 1px solid $line-light;
+            transition: $delay;
+            h3{
+                font: $b2-sb;
+                color: $brand;
+                & ~ h3{
+                    margin-top: 16px;
+                }
+                &:not(:first-child) ~ div{
+                    margin-top: 8px;
+                }
+            }
+            .btn-wrap{
+                display: flex;
+                flex-wrap: wrap;
+                padding: unset !important;
+                margin: unset;
+            }
+            table{
+                tr > *{
+                    font: $b3-rg;
+                    color: $fg-black;
+                    padding-block: 8px;
+                    *{
+                        font: inherit;
+                        color: inherit;
+                    }
+                }
+                th{
+                    width: 100px;
+                }
+                td{
+                    color: $fg-grey;
+                }
+            }
         }
     }
 }
