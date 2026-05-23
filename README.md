@@ -9,12 +9,12 @@
 
 ## 주요 화면
 
-| 구분 | 경로 | 설명 |
-|------|------|------|
-| 인트로 | `intro.html` | 서비스 소개, 로그인·회원가입 진입 |
-| 회원 | `html/user/` | 로그인, 회원가입, 프로필, 설정, 인증 등 |
-| 매칭 | `html/match/` | 매칭 등록, 목록, 결과 |
-| 컴포넌트 | `component.html` | UI 컴포넌트 모음 |
+| 구분     | 경로             | 설명                                    |
+| -------- | ---------------- | --------------------------------------- |
+| 인트로   | `intro.html`     | 서비스 소개, 로그인·회원가입 진입       |
+| 회원     | `html/user/`     | 로그인, 회원가입, 프로필, 설정, 인증 등 |
+| 매칭     | `html/match/`    | 매칭 등록, 목록, 결과                   |
+| 컴포넌트 | `component.html` | UI 컴포넌트 모음                        |
 
 ---
 
@@ -76,10 +76,10 @@ npx serve .
 
 ### 배포 URL
 
-| 페이지 | URL |
-|--------|-----|
-| 루트 (→ intro로 이동) | https://yheun03.github.io/gongting/ |
-| 인트로 | https://yheun03.github.io/gongting/intro.html |
+| 페이지                | URL                                           |
+| --------------------- | --------------------------------------------- |
+| 루트 (→ intro로 이동) | https://yheun03.github.io/gongting/           |
+| 인트로                | https://yheun03.github.io/gongting/intro.html |
 
 저장소가 `username.github.io/저장소이름/` 형태이므로, 배포 시 자산 경로 앞에 `/gongting`이 붙도록 빌드합니다.
 
